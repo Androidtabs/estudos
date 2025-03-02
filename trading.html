@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos de Trading</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    section {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+    h2 {
+      color: #16a085;
+    }
+    p {
+      line-height: 1.6;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .toggle-button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #16a085;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .toggle-button:hover {
+      background-color: #13876b;
+    }
+    .dark-mode {
+      background-color: #2c3e50;
+      color: #f7f7f7;
+    }
+    .dark-mode section {
+      background-color: #34495e;
+      color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Estudos de Trading</h1>
+    <p>Explore conceitos e estudos fundamentais para aprimorar suas estratégias de trading.</p>
+    <button class="toggle-button" onclick="toggleDarkMode()">Alternar Modo</button>
+  </header>
+
+  <section>
+    <h2>Análise Técnica</h2>
+    <p>A análise técnica baseia-se no estudo de gráficos e padrões de preço para prever movimentos futuros do mercado.</p>
+    <ul>
+      <li>Suporte e resistência</li>
+      <li>Médias móveis</li>
+      <li>Índices de força relativa (RSI)</li>
+      <li>Bandas de Bollinger</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Exemplo de Gráfico de Velas (Candlestick)</h2>
+    <p>O gráfico abaixo representa um exemplo de velas japonesas, um dos principais métodos de análise técnica.</p>
+    <div class="chart-container">
+      <canvas id="candlestickChart"></canvas>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Estudos de Trading. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    const ctx = document.getElementById('candlestickChart').getContext('2d');
+
+    const data = [
+      { t: new Date('2025-03-01'), o: 100, h: 110, l: 95, c: 105 },
+      { t: new Date('2025-03-02'), o: 105, h: 115, l: 102, c: 112 },
+      { t: new Date('2025-03-03'), o: 112, h: 120, l: 110, c: 118 },
+      { t: new Date('2025-03-04'), o: 118, h: 125, l: 115, c: 120 },
+      { t: new Date('2025-03-05'), o: 120, h: 130, l: 118, c: 125 },
+      { t: new Date('2025-03-06'), o: 125, h: 135, l: 122, c: 132 },
+    ];
+
+    new Chart(ctx, {
+      type: 'candlestick',
+      data: {
+        datasets: [{
+          label: 'Preço das Ações',
+          data: data,
+          borderColor: 'green',
+          backgroundColor: 'lightgreen',
+        }]
+      },
+      options: {
+        responsive: true,
+      }
+    });
+  </script>
+</body>
+</html>
