@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Demonstração das Mutações do Patrimônio Líquido (DMPL) ✨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f5f6fa;
+            color: #2d3436;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0984e3;
+            font-size: 36px;
+            border-bottom: 3px solid #74b9ff;
+            padding-bottom: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0984e3;
+            font-size: 28px;
+            margin-top: 40px;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        h3 {
+            color: #0984e3;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        p, ul {
+            margin: 15px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        th, td {
+            border: 1px solid #dfe6e9;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #74b9ff;
+            color: #fff;
+            font-weight: bold;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        .highlight {
+            background-color: #fab1a0;
+            padding: 6px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        strong {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Demonstração das Mutações do Patrimônio Líquido (DMPL) ✨</h1>
+
+    <!-- Parte 1/5 -->
+    <h2>📚 Parte 1/5 - Introdução à DMPL</h2>
+    <p>A Demonstração das Mutações do Patrimônio Líquido (DMPL) é um relatório contábil que detalha todas as variações no patrimônio líquido da empresa ao longo do período, oferecendo uma visão mais completa do que a DLPA (Demonstração de Lucros ou Prejuízos Acumulados).</p>
+    <p>Nesta primeira parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é a DMPL e sua importância?</li>
+        <li><span class="emoji">2️⃣</span> Diferença entre DMPL e DLPA</li>
+        <li><span class="emoji">3️⃣</span> Estrutura da DMPL e seus principais componentes</li>
+        <li><span class="emoji">4️⃣</span> Exemplo Simples de DMPL</li>
+    </ul>
+
+    <h3>1️⃣ O que é a DMPL e sua importância?</h3>
+    <p><span class="emoji">📌</span> A DMPL detalha todas as mudanças no patrimônio líquido, incluindo aportes de capital, distribuição de dividendos, reservas, ajustes patrimoniais e lucros ou prejuízos acumulados.</p>
+    <p><span class="emoji">📌</span> <strong>Objetivos da DMPL:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mostrar todas as movimentações dentro do Patrimônio Líquido.</li>
+        <li><span class="emoji">✔️</span> Evidenciar como os lucros são destinados ou distribuídos.</li>
+        <li><span class="emoji">✔️</span> Permitir uma análise mais detalhada da evolução do capital da empresa.</li>
+        <li><span class="emoji">✔️</span> Atender às exigências contábeis, principalmente para empresas de capital aberto.</li>
+    </ul>
+    <p><span class="emoji">💡</span> A DMPL fornece uma visão mais abrangente do que a DLPA, pois inclui todas as contas do patrimônio líquido.</p>
+
+    <h3>2️⃣ Diferença entre DMPL e DLPA</h3>
+    <p><span class="emoji">📌</span> A DLPA é um subconjunto da DMPL e mostra apenas a movimentação de lucros e prejuízos acumulados.</p>
+    <p><span class="emoji">🔹</span> <strong>Principais diferenças:</strong></p>
+    <table>
+        <tr><th>Critério</th><th>DLPA</th><th>DMPL</th></tr>
+        <tr><td>O que mostra?</td><td>Apenas a movimentação de lucros e prejuízos acumulados.</td><td>Todas as movimentações do patrimônio líquido.</td></tr>
+        <tr><td>Abrange aumento de capital?</td><td><span class="emoji">❌</span> Não</td><td><span class="emoji">✅</span> Sim</td></tr>
+        <tr><td>Inclui ajustes patrimoniais?</td><td><span class="emoji">❌</span> Não</td><td><span class="emoji">✅</span> Sim</td></tr>
+        <tr><td>Obrigatoriedade</td><td>Opcional para empresas menores.</td><td>Obrigatória para empresas de capital aberto.</td></tr>
+        <tr><td>Nível de detalhamento</td><td>Básico</td><td>Completo</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> Empresas que desejam transparência financeira utilizam a DMPL para mostrar a gestão do patrimônio líquido.</p>
+
+    <h3>3️⃣ Estrutura da DMPL e seus principais componentes</h3>
+    <p>A DMPL é composta por uma tabela que mostra a evolução das contas do Patrimônio Líquido, incluindo:</p>
+    <p><span class="emoji">📌</span> <strong>Principais contas da DMPL:</strong></p>
+    <table>
+        <tr><th>Conta do PL</th><th>Descrição</th></tr>
+        <tr><td>Capital Social</td><td>Aportes feitos pelos sócios ou acionistas.</td></tr>
+        <tr><td>Reservas de Capital</td><td>Recursos recebidos que não fazem parte do capital social, como ágio na emissão de ações.</td></tr>
+        <tr><td>Reservas de Lucro</td><td>Parte do lucro retida para reinvestimento.</td></tr>
+        <tr><td>Ajustes de Avaliação Patrimonial</td><td>Ajustes no valor de ativos e passivos, como reavaliações contábeis.</td></tr>
+        <tr><td>Lucros ou Prejuízos Acumulados</td><td>Lucros que não foram distribuídos nem destinados a reservas.</td></tr>
+        <tr><td>Ações em Tesouraria</td><td>Ações da própria empresa recompradas do mercado.</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> A DMPL deve detalhar todas as mudanças no Patrimônio Líquido, linha por linha.</p>
+
+    <h3>4️⃣ Exemplo Simples de DMPL</h3>
+    <p>Vamos considerar a Empresa Alpha Ltda., que teve as seguintes movimentações no Patrimônio Líquido durante o exercício de 2024:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Aumentou o capital social em R$ 100.000,00.</li>
+        <li><span class="emoji">✔️</span> Gerou um lucro líquido de R$ 150.000,00.</li>
+        <li><span class="emoji">✔️</span> Destinou R$ 10.000,00 para reserva legal.</li>
+        <li><span class="emoji">✔️</span> Distribuiu R$ 50.000,00 em dividendos.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Demonstração das Mutações do Patrimônio Líquido (DMPL) – Empresa Alpha Ltda.</strong></p>
+    <table>
+        <tr><th>Conta</th><th>Saldo Inicial (R$)</th><th>Aportes / Lucro (R$)</th><th>Reservas / Dividendos (R$)</th><th>Saldo Final (R$)</th></tr>
+        <tr><td>Capital Social</td><td>300.000</td><td>+100.000</td><td>-</td><td>400.000</td></tr>
+        <tr><td>Reservas de Lucro</td><td>50.000</td><td>-</td><td>+10.000</td><td>60.000</td></tr>
+        <tr><td>Lucros Acumulados</td><td>100.000</td><td>+150.000</td><td>-50.000</td><td>200.000</td></tr>
+        <tr><td><strong>Total do Patrimônio Líquido</strong></td><td>450.000</td><td>+250.000</td><td>-60.000</td><td>640.000</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> A empresa aumentou o capital social em R$ 100.000,00.</li>
+        <li><span class="emoji">✅</span> O lucro líquido de R$ 150.000,00 foi incorporado ao PL.</li>
+        <li><span class="emoji">✅</span> R$ 10.000,00 foram destinados à reserva legal, fortalecendo o patrimônio.</li>
+        <li><span class="emoji">✅</span> R$ 50.000,00 foram distribuídos como dividendos aos acionistas.</li>
+        <li><span class="emoji">✅</span> O patrimônio líquido cresceu de R$ 450.000,00 para R$ 640.000,00, indicando crescimento financeiro.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Esse exemplo mostra como a DMPL registra todas as mudanças no Patrimônio Líquido de forma detalhada.</p>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 1/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> O que é a DMPL e por que ela é importante.</li>
+        <li><span class="emoji">✅</span> A diferença entre DMPL e DLPA.</li>
+        <li><span class="emoji">✅</span> A estrutura da DMPL e suas principais contas.</li>
+        <li><span class="emoji">✅</span> Como interpretar um exemplo prático de DMPL.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 2/5, vamos aprofundar as movimentações do Capital Social e das Reservas de Capital na DMPL! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 2/5 -->
+    <h2>📚 Parte 2/5 - Capital Social e Reservas de Capital</h2>
+    <p>Na Parte 1, entendemos a importância da DMPL, sua estrutura e como ela se diferencia da DLPA. Agora, vamos aprofundar as movimentações do Capital Social e das Reservas de Capital, que são dois elementos fundamentais do Patrimônio Líquido.</p>
+    <p>Nesta segunda parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é Capital Social e como ele aparece na DMPL?</li>
+        <li><span class="emoji">2️⃣</span> Reservas de Capital: o que são e como funcionam?</li>
+        <li><span class="emoji">3️⃣</span> Impacto das movimentações de capital na DMPL</li>
+        <li><span class="emoji">4️⃣</span> Exemplo prático de DMPL com movimentação de Capital Social e Reservas de Capital</li>
+    </ul>
+
+    <h3>1️⃣ O que é Capital Social e como ele aparece na DMPL?</h3>
+    <p><span class="emoji">📌</span> O Capital Social representa o investimento inicial e adicional feito pelos sócios ou acionistas na empresa.</p>
+    <p><span class="emoji">🔹</span> <strong>Como o Capital Social pode mudar na DMPL?</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> <strong>Aumento de Capital:</strong> Quando os sócios aportam mais recursos ou a empresa emite novas ações.</li>
+        <li><span class="emoji">✔️</span> <strong>Redução de Capital:</strong> Quando a empresa devolve parte do capital aos sócios, geralmente em caso de reestruturação.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Como aparece na DMPL?</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Se a empresa recebe novos aportes de sócios, o Capital Social aumenta.</li>
+        <li><span class="emoji">✔️</span> Se a empresa reduz capital, o Capital Social diminui.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Empresas em crescimento costumam apresentar aumentos frequentes no Capital Social.</p>
+
+    <h3>2️⃣ Reservas de Capital: o que são e como funcionam?</h3>
+    <p><span class="emoji">📌</span> Reservas de Capital são valores recebidos que não são classificados como Capital Social nem como lucro.</p>
+    <p><span class="emoji">🔹</span> <strong>Principais tipos de Reservas de Capital:</strong></p>
+    <table>
+        <tr><th>Tipo de Reserva</th><th>Descrição</th></tr>
+        <tr><td>Ágio na Emissão de Ações</td><td>Diferença entre o valor pago pelos investidores e o valor nominal das ações.</td></tr>
+        <tr><td>Doações e Subvenções para Investimentos</td><td>Recursos recebidos de terceiros para financiar projetos.</td></tr>
+        <tr><td>Prêmios na Emissão de Debêntures</td><td>Valores arrecadados além do valor de face dos títulos emitidos.</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Como aparecem na DMPL?</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Se a empresa recebe um ágio na emissão de ações, a Reserva de Capital aumenta.</li>
+        <li><span class="emoji">✔️</span> Se a empresa utiliza as reservas para absorver prejuízos, a Reserva de Capital diminui.</li>
+    </ul>
+    <p><span class="emoji">💡</span> As Reservas de Capital fortalecem o patrimônio da empresa e não podem ser distribuídas como dividendos.</p>
+
+    <h3>3️⃣ Impacto das movimentações de capital na DMPL</h3>
+    <p><span class="emoji">📌</span> Alterações no Capital Social e nas Reservas de Capital impactam diretamente a estrutura do Patrimônio Líquido.</p>
+    <p><span class="emoji">🔹</span> <strong>Se há aumento de Capital Social:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Melhora a solidez financeira da empresa.</li>
+        <li><span class="emoji">✔️</span> Pode indicar crescimento e expansão.</li>
+        <li><span class="emoji">✔️</span> Pode diluir a participação dos sócios se novas ações forem emitidas.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Se há aumento nas Reservas de Capital:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mostra que a empresa recebeu recursos sem precisar tomar empréstimos.</li>
+        <li><span class="emoji">✔️</span> Indica que os investidores estão dispostos a pagar mais pelas ações da empresa.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Se há redução de Capital Social:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Pode significar reestruturação financeira.</li>
+        <li><span class="emoji">✔️</span> Se feita sem justificativa, pode indicar problemas de liquidez.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Empresas em crescimento geralmente têm aumento de capital e formação de reservas, enquanto empresas em dificuldades podem reduzir capital.</p>
+
+    <h3>4️⃣ Exemplo prático de DMPL com movimentação de Capital Social e Reservas de Capital</h3>
+    <p>Vamos considerar a Empresa Beta Ltda., que teve as seguintes movimentações em 2024:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Aumento de Capital Social de R$ 200.000,00 com novos aportes dos sócios.</li>
+        <li><span class="emoji">✔️</span> Recebeu R$ 50.000,00 de ágio na emissão de ações, aumentando a Reserva de Capital.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Demonstração das Mutações do Patrimônio Líquido (DMPL) – Empresa Beta Ltda.</strong></p>
+    <table>
+        <tr><th>Conta</th><th>Saldo Inicial (R$)</th><th>Aumento de Capital (R$)</th><th>Movimentação em Reservas (R$)</th><th>Saldo Final (R$)</th></tr>
+        <tr><td>Capital Social</td><td>500.000</td><td>+200.000</td><td>-</td><td>700.000</td></tr>
+        <tr><td>Reservas de Capital</td><td>20.000</td><td>-</td><td>+50.000</td><td>70.000</td></tr>
+        <tr><td><strong>Total do Patrimônio Líquido</strong></td><td>520.000</td><td>+200.000</td><td>+50.000</td><td>770.000</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> A empresa aumentou o Capital Social em R$ 200.000,00, fortalecendo sua estrutura financeira.</li>
+        <li><span class="emoji">✅</span> Recebeu R$ 50.000,00 de Reservas de Capital, indicando valorização das ações.</li>
+        <li><span class="emoji">✅</span> O Patrimônio Líquido cresceu de R$ 520.000,00 para R$ 770.000,00, mostrando evolução financeira.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Empresas que conseguem aumentar capital sem comprometer liquidez tendem a crescer de forma sustentável.</p>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 2/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> O que é o Capital Social e como ele impacta a DMPL.</li>
+        <li><span class="emoji">✅</span> O que são Reservas de Capital e quando elas aumentam ou diminuem.</li>
+        <li><span class="emoji">✅</span> Como as movimentações de capital fortalecem ou sinalizam riscos financeiros.</li>
+        <li><span class="emoji">✅</span> Como interpretar um exemplo prático de DMPL com alterações no Capital Social e Reservas de Capital.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 3/5, vamos analisar a destinação de lucros e reservas na DMPL, incluindo dividendos e a retenção de lucros! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 3/5 -->
+    <h2>📚 Parte 3/5 - Destinação de Lucros e Reservas</h2>
+    <p>Na Parte 2, vimos como a DMPL reflete as movimentações no Capital Social e nas Reservas de Capital. Agora, vamos focar na destinação dos lucros e reservas, analisando como os resultados da empresa são distribuídos entre os acionistas e reinvestidos no negócio.</p>
+    <p>Nesta terceira parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> Como a DMPL reflete a destinação dos lucros?</li>
+        <li><span class="emoji">2️⃣</span> Quais são as principais reservas de lucro?</li>
+        <li><span class="emoji">3️⃣</span> Impacto da distribuição de dividendos na DMPL</li>
+        <li><span class="emoji">4️⃣</span> Exemplo prático de DMPL com destinação de lucros e reservas</li>
+    </ul>
+
+    <h3>1️⃣ Como a DMPL reflete a destinação dos lucros?</h3>
+    <p><span class="emoji">📌</span> A DMPL detalha o que a empresa faz com os lucros gerados.</p>
+    <p><span class="emoji">🔹</span> Após apurar o lucro líquido na Demonstração do Resultado do Exercício (DRE), a empresa precisa definir sua destinação, que pode ser:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> <strong>Reserva de Lucro</strong> → Para reinvestimento na empresa.</li>
+        <li><span class="emoji">✔️</span> <strong>Distribuição de Dividendos</strong> → Para pagamento aos acionistas.</li>
+        <li><span class="emoji">✔️</span> <strong>Lucros Acumulados</strong> → Para manter no patrimônio da empresa.</li>
+    </ul>
+    <p><span class="emoji">📌</span> Se a empresa teve prejuízo no período, a DMPL também registra essa informação.</p>
+    <p><span class="emoji">💡</span> A forma como os lucros são destinados mostra a estratégia da empresa: crescimento, distribuição de riqueza ou preparação para crises.</p>
+
+    <h3>2️⃣ Quais são as principais reservas de lucro?</h3>
+    <p><span class="emoji">📌</span> Reservas de Lucro são valores que a empresa retém em vez de distribuir aos acionistas, fortalecendo seu patrimônio líquido.</p>
+    <p><span class="emoji">🔹</span> <strong>Principais tipos de reservas de lucro:</strong></p>
+    <table>
+        <tr><th>Reserva</th><th>Objetivo</th><th>Limite Máximo</th></tr>
+        <tr><td>Reserva Legal</td><td>Criada obrigatoriamente para fortalecer o capital da empresa.</td><td>5% do lucro líquido até atingir 20% do Capital Social.</td></tr>
+        <tr><td>Reserva Estatutária</td><td>Criada conforme o estatuto da empresa para fins específicos.</td><td>Definido no estatuto.</td></tr>
+        <tr><td>Reserva de Expansão</td><td>Reinvestir os lucros para crescimento e novos projetos.</td><td>Sem limite fixo.</td></tr>
+        <tr><td>Reserva de Contingência</td><td>Garantir recursos para enfrentar períodos de crise ou prejuízo.</td><td>Depende do risco previsto.</td></tr>
+        <tr><td>Reserva de Incentivos Fiscais</td><td>Benefícios fiscais que reduzem a carga tributária.</td><td>Conforme legislação vigente.</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> As reservas de lucro fortalecem a empresa e garantem estabilidade financeira.</p>
+    <p><span class="emoji">💡</span> Empresas que querem crescer rapidamente tendem a alocar mais recursos em Reservas de Expansão.</p>
+
+    <h3>3️⃣ Impacto da distribuição de dividendos na DMPL</h3>
+    <p><span class="emoji">📌</span> Os dividendos representam a parte do lucro distribuída aos acionistas.</p>
+    <p><span class="emoji">🔹</span> <strong>Formas de pagamento de dividendos:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> <strong>Dividendos Obrigatórios:</strong> Empresas de capital aberto devem distribuir pelo menos 25% do lucro líquido, salvo disposição no estatuto.</li>
+        <li><span class="emoji">✔️</span> <strong>Dividendos Adicionais:</strong> Empresas podem distribuir mais do que o mínimo exigido.</li>
+        <li><span class="emoji">✔️</span> <strong>Juros sobre Capital Próprio (JCP):</strong> Forma alternativa de distribuição que pode ser usada para reduzir impostos.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Efeito na DMPL:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Redução do saldo de lucros acumulados.</li>
+        <li><span class="emoji">✔️</span> Redução do Patrimônio Líquido, pois há saída de recursos para os acionistas.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Empresas que distribuem muitos dividendos podem ter menos recursos para crescimento futuro.</p>
+
+    <h3>4️⃣ Exemplo prático de DMPL com destinação de lucros e reservas</h3>
+    <p>Vamos considerar a Empresa Gama Ltda., que teve as seguintes movimentações em 2024:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Lucro líquido do exercício: R$ 300.000,00.</li>
+        <li><span class="emoji">✔️</span> Destinou R$ 15.000,00 para Reserva Legal (5%).</li>
+        <li><span class="emoji">✔️</span> Distribuiu R$ 100.000,00 em dividendos.</li>
+        <li><span class="emoji">✔️</span> Alocou R$ 50.000,00 para Reserva de Expansão.</li>
+        <li><span class="emoji">✔️</span> Manteve R$ 135.000,00 como lucros acumulados.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Demonstração das Mutações do Patrimônio Líquido (DMPL) – Empresa Gama Ltda.</strong></p>
+    <table>
+        <tr><th>Conta</th><th>Saldo Inicial (R$)</th><th>Lucro Líquido (R$)</th><th>Reservas e Dividendos (R$)</th><th>Saldo Final (R$)</th></tr>
+        <tr><td>Lucros Acumulados</td><td>50.000</td><td>+300.000</td><td>-165.000</td><td>185.000</td></tr>
+        <tr><td>Reserva Legal</td><td>40.000</td><td>-</td><td>+15.000</td><td>55.000</td></tr>
+        <tr><td>Reserva de Expansão</td><td>30.000</td><td>-</td><td>+50.000</td><td>80.000</td></tr>
+        <tr><td>Dividendos a Pagar</td><td>-</td><td>-</td><td>-100.000</td><td>(100.000) (saída)</td></tr>
+        <tr><td><strong>Total do Patrimônio Líquido</strong></td><td>500.000</td><td>+300.000</td><td>-165.000</td><td>635.000</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> A empresa teve um lucro líquido de R$ 300.000,00, que foi incorporado ao Patrimônio Líquido.</li>
+        <li><span class="emoji">✅</span> R$ 15.000,00 foram destinados à Reserva Legal, conforme exigido por lei.</li>
+        <li><span class="emoji">✅</span> R$ 100.000,00 foram distribuídos como dividendos, reduzindo os lucros acumulados.</li>
+        <li><span class="emoji">✅</span> R$ 50.000,00 foram alocados para a Reserva de Expansão, fortalecendo o crescimento futuro.</li>
+        <li><span class="emoji">✅</span> O saldo final de lucros acumulados aumentou para R$ 185.000,00, garantindo reserva para o próximo exercício.</li>
+        <li><span class="emoji">✅</span> O Patrimônio Líquido total aumentou de R$ 500.000,00 para R$ 635.000,00, mostrando crescimento sustentável.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Esse exemplo mostra como a DMPL reflete todas as movimentações dos lucros e reservas, ajudando a entender a estratégia da empresa.</p>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 3/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> Como a DMPL reflete a destinação dos lucros após o fechamento da DRE.</li>
+        <li><span class="emoji">✅</span> Quais são as principais Reservas de Lucro e sua importância.</li>
+        <li><span class="emoji">✅</span> Como a distribuição de dividendos impacta a DMPL e o Patrimônio Líquido.</li>
+        <li><span class="emoji">✅</span> Como interpretar um exemplo prático de DMPL com destinação de lucros e reservas.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 4/5, vamos aprofundar a recompra de ações e ajustes patrimoniais na DMPL! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 4/5 -->
+    <h2>📚 Parte 4/5 - Recompra de Ações e Ajustes Patrimoniais</h2>
+    <p>Na Parte 3, analisamos a destinação dos lucros na DMPL, incluindo reservas e dividendos. Agora, vamos aprofundar o impacto da recompra de ações e dos ajustes patrimoniais, que também afetam o Patrimônio Líquido da empresa.</p>
+    <p>Nesta quarta parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é recompra de ações e como aparece na DMPL?</li>
+        <li><span class="emoji">2️⃣</span> Ajustes de Avaliação Patrimonial: o que são e como impactam o PL?</li>
+        <li><span class="emoji">3️⃣</span> Impacto de ajustes patrimoniais no patrimônio líquido</li>
+        <li><span class="emoji">4️⃣</span> Exemplo prático de DMPL com recompra de ações e ajustes patrimoniais</li>
+    </ul>
+
+    <h3>1️⃣ O que é recompra de ações e como aparece na DMPL?</h3>
+    <p><span class="emoji">📌</span> A recompra de ações ocorre quando uma empresa adquire suas próprias ações no mercado.</p>
+    <p><span class="emoji">🔹</span> <strong>Motivos para recompra de ações:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> <strong>Valorizar as ações</strong> → Redução da quantidade de ações em circulação pode aumentar o preço unitário.</li>
+        <li><span class="emoji">✔️</span> <strong>Sinalizar confiança na empresa</strong> → Pode indicar que a administração acredita que as ações estão subvalorizadas.</li>
+        <li><span class="emoji">✔️</span> <strong>Distribuir futuramente para executivos</strong> → Programas de remuneração podem usar ações recompradas como incentivo.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Como aparece na DMPL?</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> A recompra de ações reduz o Patrimônio Líquido e é registrada na conta Ações em Tesouraria.</li>
+        <li><span class="emoji">✔️</span> Se essas ações forem revendidas no futuro, o PL pode ser reajustado para cima ou para baixo, dependendo do preço de revenda.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Embora a recompra possa beneficiar acionistas, se mal planejada pode comprometer a liquidez da empresa.</p>
+
+    <h3>2️⃣ Ajustes de Avaliação Patrimonial: o que são e como impactam o PL?</h3>
+    <p><span class="emoji">📌</span> Ajustes de Avaliação Patrimonial (AAP) são correções feitas no valor de ativos e passivos para refletir melhor sua realidade econômica.</p>
+    <p><span class="emoji">🔹</span> <strong>Principais motivos para ajustes patrimoniais:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> <strong>Reavaliação de bens</strong> → Exemplo: um imóvel valorizado é ajustado para cima no balanço.</li>
+        <li><span class="emoji">✔️</span> <strong>Alterações cambiais</strong> → Empresas que operam com moedas estrangeiras ajustam seus ativos conforme variações cambiais.</li>
+        <li><span class="emoji">✔️</span> <strong>Mudanças em normas contábeis</strong> → Se uma nova regra contábil exigir reclassificação de um ativo ou passivo.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Como aparecem na DMPL?</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Se um ativo for reavaliado para cima, o PL aumenta.</li>
+        <li><span class="emoji">✔️</span> Se um ativo perder valor (impairment), o PL diminui.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Ajustes patrimoniais não afetam diretamente o resultado da empresa, mas podem impactar a percepção dos investidores.</p>
+
+    <h3>3️⃣ Impacto de ajustes patrimoniais no patrimônio líquido</h3>
+    <p><span class="emoji">📌</span> Os ajustes patrimoniais podem afetar tanto o PL quanto a distribuição de lucros e dividendos.</p>
+    <p><span class="emoji">🔹</span> <strong>Se o ajuste for positivo (reavaliação de ativos para cima):</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> O Patrimônio Líquido aumenta.</li>
+        <li><span class="emoji">✔️</span> A empresa pode parecer mais valiosa para investidores.</li>
+        <li><span class="emoji">✔️</span> Pode haver aumento na capacidade de distribuição de dividendos.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Se o ajuste for negativo (impairment ou desvalorização de ativos):</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> O Patrimônio Líquido diminui.</li>
+        <li><span class="emoji">✔️</span> Pode reduzir a confiança do mercado na empresa.</li>
+        <li><span class="emoji">✔️</span> Pode limitar a distribuição de dividendos.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Empresas devem ser transparentes ao registrar ajustes patrimoniais para evitar distorções na avaliação de sua saúde financeira.</p>
+
+    <h3>4️⃣ Exemplo prático de DMPL com recompra de ações e ajustes patrimoniais</h3>
+    <p>Vamos considerar a Empresa Delta Ltda., que teve as seguintes movimentações em 2024:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Recomprou R$ 50.000,00 em ações próprias.</li>
+        <li><span class="emoji">✔️</span> Registrou uma valorização de imóveis em R$ 100.000,00 como Ajuste de Avaliação Patrimonial.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>Demonstração das Mutações do Patrimônio Líquido (DMPL) – Empresa Delta Ltda.</strong></p>
+    <table>
+        <tr><th>Conta</th><th>Saldo Inicial (R$)</th><th>Movimentação em Ações e Ajustes (R$)</th><th>Saldo Final (R$)</th></tr>
+        <tr><td>Ações em Tesouraria</td><td>-</td><td>-50.000 (recompra)</td><td>(50.000)</td></tr>
+        <tr><td>Ajustes de Avaliação Patrimonial</td><td>20.000</td><td>+100.000</td><td>120.000</td></tr>
+        <tr><td><strong>Total do Patrimônio Líquido</strong></td><td>600.000</td><td>+50.000</td><td>650.000</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> A empresa recomprou R$ 50.000,00 em ações próprias, reduzindo o PL.</li>
+        <li><span class="emoji">✅</span> O ajuste patrimonial positivo de R$ 100.000,00 aumentou o PL.</li>
+        <li><span class="emoji">✅</span> O Patrimônio Líquido cresceu de R$ 600.000,00 para R$ 650.000,00, devido à valorização dos ativos.</li>
+    </ul>
+    <p><span class="emoji">💡</span> A combinação de recompra de ações e ajustes patrimoniais mostra como a DMPL registra eventos que afetam diretamente o valor da empresa.</p>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 4/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> Como a recompra de ações impacta a DMPL e o Patrimônio Líquido.</li>
+        <li><span class="emoji">✅</span> O que são Ajustes de Avaliação Patrimonial e quando eles são aplicados.</li>
+        <li><span class="emoji">✅</span> Como os ajustes patrimoniais afetam a distribuição de dividendos e a percepção da empresa no mercado.</li>
+        <li><span class="emoji">✅</span> Como interpretar um exemplo prático de DMPL com recompra de ações e reavaliação patrimonial.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 5/5, vamos consolidar tudo com uma análise final da DMPL, explorando indicadores financeiros e estratégias para interpretar a saúde financeira da empresa! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 5/5 -->
+    <h2>📚 Parte 5/5 - Análise Completa da DMPL</h2>
+    <p>Na Parte 4, analisamos o impacto da recompra de ações e dos ajustes patrimoniais na DMPL. Agora, vamos consolidar tudo com uma análise final da DMPL, explorando indicadores financeiros e estratégias para interpretar a saúde financeira da empresa.</p>
+    <p>Nesta última parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> Como interpretar a DMPL para avaliar a empresa?</li>
+        <li><span class="emoji">2️⃣</span> Principais indicadores financeiros baseados na DMPL</li>
+        <li><span class="emoji">3️⃣</span> Comparação da DMPL entre empresas e setores</li>
+        <li><span class="emoji">4️⃣</span> Exemplo prático de análise completa da DMPL</li>
+    </ul>
+
+    <h3>1️⃣ Como interpretar a DMPL para avaliar a empresa?</h3>
+    <p><span class="emoji">📌</span> A DMPL fornece uma visão detalhada das mudanças no patrimônio líquido, ajudando investidores e gestores a entender como a empresa gere seus recursos.</p>
+    <p><span class="emoji">🔹</span> <strong>Se a DMPL mostra crescimento contínuo do Patrimônio Líquido:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Indica bons resultados financeiros.</li>
+        <li><span class="emoji">✔️</span> A empresa pode estar reinvestindo lucros para crescer.</li>
+        <li><span class="emoji">✔️</span> Pode ser um sinal positivo para investidores e credores.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Se a DMPL mostra quedas no Patrimônio Líquido:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Pode indicar prejuízos recorrentes ou distribuição excessiva de dividendos.</li>
+        <li><span class="emoji">✔️</span> Se há muitas recompras de ações sem lucros crescentes, pode haver problemas financeiros.</li>
+        <li><span class="emoji">✔️</span> Se os ajustes patrimoniais forem negativos, pode ser um alerta de desvalorização dos ativos da empresa.</li>
+    </ul>
+    <p><span class="emoji">💡</span> A DMPL é essencial para entender se a empresa está crescendo de forma sustentável ou enfrentando dificuldades financeiras.</p>
+
+    <h3>2️⃣ Principais indicadores financeiros baseados na DMPL</h3>
+    <p>Os seguintes indicadores ajudam a interpretar a eficiência na gestão do Patrimônio Líquido:</p>
+    <p><span class="emoji">📌</span> <strong>1️⃣ Índice de Rentabilidade do PL (ROE - Return on Equity)</strong></p>
+    <p>ROE = (Lucro Líquido / Patrimônio Líquido) × 100</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mede a eficiência da empresa em gerar lucro para os acionistas.</li>
+        <li><span class="emoji">✔️</span> Se alto, indica boa utilização dos recursos dos sócios.</li>
+        <li><span class="emoji">✔️</span> Se baixo, pode indicar dificuldades em gerar retorno sobre o capital investido.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>2️⃣ Índice de Retenção de Lucros</strong></p>
+    <p>Retenção = (Lucros Retidos / Lucro Líquido) × 100</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mede quanto do lucro foi reinvestido na empresa.</li>
+        <li><span class="emoji">✔️</span> Empresas que precisam crescer costumam ter alta retenção de lucros.</li>
+    </ul>
+    <p><span class="emoji">📌</span> <strong>3️⃣ Crescimento do Patrimônio Líquido (CPL)</strong></p>
+    <p>CPL = [(PL Final - PL Inicial) / PL Inicial] × 100</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mede a evolução do patrimônio líquido ao longo do período.</li>
+        <li><span class="emoji">✔️</span> Se negativo, pode indicar má gestão ou prejuízos recorrentes.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Esses indicadores ajudam a entender a rentabilidade e sustentabilidade da empresa.</p>
+
+    <h3>3️⃣ Comparação da DMPL entre empresas e setores</h3>
+    <p>Cada setor tem estratégias diferentes em relação à distribuição de lucros, retenção de capital e recompra de ações.</p>
+    <p><span class="emoji">📌</span> <strong>Exemplo de diferenças por setor:</strong></p>
+    <table>
+        <tr><th>Setor</th><th>ROE (%)</th><th>Retenção de Lucros (%)</th><th>Crescimento do PL (%)</th></tr>
+        <tr><td>Indústria</td><td>12%</td><td>60%</td><td>8%</td></tr>
+        <tr><td>Comércio</td><td>18%</td><td>50%</td><td>10%</td></tr>
+        <tr><td>Tecnologia</td><td>25%</td><td>80%</td><td>20%</td></tr>
+        <tr><td>Bancos</td><td>15%</td><td>40%</td><td>6%</td></tr>
+    </table>
+    <ul>
+        <li><span class="emoji">🔹</span> Empresas de tecnologia tendem a reter mais lucros para crescimento e inovação.</li>
+        <li><span class="emoji">🔹</span> Bancos e empresas de serviços distribuem mais dividendos, pois operam com fluxo de caixa estável.</li>
+        <li><span class="emoji">🔹</span> Indústrias e varejo equilibram retenção de lucros e distribuição de dividendos.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Comparar a DMPL entre empresas do mesmo setor ajuda a entender se a estratégia da empresa está alinhada com o mercado.</p>
+
+    <h3>4️⃣ Exemplo prático de análise completa da DMPL</h3>
+    <p>Vamos considerar a Empresa Ômega Ltda., que apresentou a seguinte DMPL:</p>
+    <p><span class="emoji">📌</span> <strong>Demonstração das Mutações do Patrimônio Líquido (DMPL) – Empresa Ômega Ltda.</strong></p>
+    <table>
+        <tr><th>Conta</th><th>Saldo Inicial (R$)</th><th>Lucro Líquido (R$)</th><th>Movimentações (R$)</th><th>Saldo Final (R$)</th></tr>
+        <tr><td>Capital Social</td><td>1.000.000</td><td>-</td><td>+100.000 (Aumento de Capital)</td><td>1.100.000</td></tr>
+        <tr><td>Reservas de Lucro</td><td>200.000</td><td>-</td><td>+50.000 (Reserva para Expansão)</td><td>250.000</td></tr>
+        <tr><td>Ajustes Patrimoniais</td><td>50.000</td><td>-</td><td>-20.000 (Desvalorização de ativos)</td><td>30.000</td></tr>
+        <tr><td>Lucros Acumulados</td><td>150.000</td><td>+400.000</td><td>-200.000 (Dividendos pagos)</td><td>350.000</td></tr>
+        <tr><td>Ações em Tesouraria</td><td>(30.000)</td><td>-</td><td>-50.000 (Recompra de ações)</td><td>(80.000)</td></tr>
+        <tr><td><strong>Total do Patrimônio Líquido</strong></td><td>1.370.000</td><td>+400.000</td><td>-120.000</td><td>1.650.000</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Cálculo dos Indicadores Financeiros:</strong></p>
+    <p><strong>✔ ROE (Retorno sobre o PL)</strong></p>
+    <p>(400.000 / 1.370.000) × 100 = 29,2%</p>
+    <p><span class="emoji">✅</span> A empresa teve um ROE de 29,2%, o que indica alta rentabilidade para os acionistas.</p>
+    <p><strong>✔ Índice de Retenção de Lucros</strong></p>
+    <p>(200.000 / 400.000) × 100 = 50%</p>
+    <p><span class="emoji">✅</span> 50% dos lucros foram retidos, garantindo capital para crescimento futuro.</p>
+    <p><strong>✔ Crescimento do Patrimônio Líquido (CPL)</strong></p>
+    <p>[(1.650.000 - 1.370.000) / 1.370.000] × 100 = 20,4%</p>
+    <p><span class="emoji">✅</span> O Patrimônio Líquido cresceu 20,4% no período, um bom sinal de expansão.</p>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> A empresa aumentou seu capital social em R$ 100.000,00, reforçando sua estrutura financeira.</li>
+        <li><span class="emoji">✅</span> A reserva para expansão de R$ 50.000,00 indica planejamento para crescimento futuro.</li>
+        <li><span class="emoji">✅</span> A recompra de ações reduziu o PL em R$ 50.000,00, estratégia comum para valorização de mercado.</li>
+        <li><span class="emoji">✅</span> O ajuste patrimonial negativo de R$ 20.000,00 reflete uma desvalorização de ativos.</li>
+        <li><span class="emoji">✅</span> O Patrimônio Líquido final de R$ 1.650.000,00 mostra crescimento sólido.</li>
+    </ul>
+    <p><span class="emoji">💡</span> Esse exemplo mostra como a DMPL ajuda a entender a evolução financeira de uma empresa de forma clara e detalhada.</p>
+
+    <p><span class="emoji">📊</span> <strong>Resumo Final - O que Aprendemos?</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> Como interpretar a DMPL para avaliar a saúde financeira da empresa.</li>
+        <li><span class="emoji">✅</span> Quais são os principais indicadores financeiros baseados na DMPL.</li>
+        <li><span class="emoji">✅</span> Como comparar a DMPL entre diferentes empresas e setores.</li>
+        <li><span class="emoji">✅</span> Como realizar uma análise prática e detalhada da DMPL.</li>
+    </ul>
+    <p><span class="emoji">🚀</span> Agora você domina completamente a DMPL! Se precisar de uma análise personalizada ou quiser aprofundar mais em algum ponto, me avise! <span class="emoji">🔥</span></p>
+</body>
+</html>
