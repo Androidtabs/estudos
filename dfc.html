@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Fluxo de Caixa ✨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f5f6fa;
+            color: #2d3436;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0984e3;
+            font-size: 36px;
+            border-bottom: 3px solid #74b9ff;
+            padding-bottom: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0984e3;
+            font-size: 28px;
+            margin-top: 40px;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        h3 {
+            color: #0984e3;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        p, ul {
+            margin: 15px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        th, td {
+            border: 1px solid #dfe6e9;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #74b9ff;
+            color: #fff;
+            font-weight: bold;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        .highlight {
+            background-color: #fab1a0;
+            padding: 6px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        strong {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Fluxo de Caixa ✨</h1>
+
+    <!-- Parte 1/5 -->
+    <h2>📚 Parte 1/5 - Introdução ao Fluxo de Caixa</h2>
+    <p>O Fluxo de Caixa é um dos relatórios financeiros mais importantes para qualquer empresa. Ele mostra todas as entradas e saídas de dinheiro em um determinado período, permitindo entender se a empresa tem liquidez para pagar suas contas e continuar operando.</p>
+    <p>Nesta primeira parte, vamos entender:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é o Fluxo de Caixa e sua Importância</li>
+        <li><span class="emoji">2️⃣</span> Diferença entre Lucro e Fluxo de Caixa</li>
+        <li><span class="emoji">3️⃣</span> Estrutura Básica do Fluxo de Caixa</li>
+        <li><span class="emoji">4️⃣</span> Exemplo Simples de Fluxo de Caixa</li>
+    </ul>
+
+    <h3>1️⃣ O que é o Fluxo de Caixa e sua Importância?</h3>
+    <p>O Fluxo de Caixa é um controle financeiro que mostra:</p>
+    <ul>
+        <li><span class="emoji">✔️</span> Todo o dinheiro que entra (vendas, empréstimos, investimentos).</li>
+        <li><span class="emoji">✔️</span> Todo o dinheiro que sai (pagamento de fornecedores, salários, impostos).</li>
+        <li><span class="emoji">✔️</span> O saldo disponível, ou seja, quanto dinheiro a empresa tem em caixa após todas as transações.</li>
+    </ul>
+    <p><span class="emoji">📊</span> <strong>Por que ele é tão importante?</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> Evita surpresas financeiras – Uma empresa pode estar lucrando no papel, mas sem dinheiro suficiente para pagar suas contas.</li>
+        <li><span class="emoji">✅</span> Ajuda no planejamento de gastos – Permite prever momentos de aperto financeiro e planejar melhor os investimentos.</li>
+        <li><span class="emoji">✅</span> Facilita decisões estratégicas – Permite saber se é o momento certo para expandir, contratar mais funcionários ou buscar empréstimos.</li>
+        <li><span class="emoji">✅</span> Demonstra a saúde financeira do negócio – Bancos e investidores analisam o fluxo de caixa para entender a viabilidade de um negócio.</li>
+    </ul>
+
+    <h3>2️⃣ Diferença entre Lucro e Fluxo de Caixa</h3>
+    <p>Muitas pessoas confundem lucro com fluxo de caixa, mas eles são conceitos diferentes.</p>
+    <p><span class="emoji">📌</span> <strong>Lucro:</strong> É a diferença entre receitas e despesas contabilizadas, seguindo o regime de competência (o lucro pode existir sem que o dinheiro tenha sido recebido).</p>
+    <p><span class="emoji">📌</span> <strong>Fluxo de Caixa:</strong> Mostra dinheiro real que entrou e saiu do caixa da empresa, seguindo o regime de caixa (só considera dinheiro que realmente entrou ou saiu).</p>
+    <p><span class="emoji">📊</span> <strong>Exemplo Prático:</strong></p>
+    <table>
+        <tr><th>Mês</th><th>Venda Realizada (Faturamento)</th><th>Recebimento Efetivo</th></tr>
+        <tr><td>Janeiro</td><td>R$ 50.000,00 (Venda a prazo)</td><td>R$ 10.000,00 (Entrada real)</td></tr>
+        <tr><td>Fevereiro</td><td>R$ 0,00 (Nenhuma venda nova)</td><td>R$ 20.000,00 (Cliente pagando parcela)</td></tr>
+        <tr><td>Março</td><td>R$ 0,00</td><td>R$ 20.000,00</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> <strong>Conclusão:</strong> No regime de competência, janeiro teve um faturamento de R$ 50.000,00, mas no regime de caixa, o dinheiro só entrou aos poucos nos meses seguintes. Se a empresa tiver muitas vendas a prazo e poucos recebimentos imediatos, pode acabar sem dinheiro para pagar suas contas, mesmo estando lucrativa no papel.</p>
+
+    <h3>3️⃣ Estrutura Básica do Fluxo de Caixa</h3>
+    <p>O Fluxo de Caixa é dividido em três grandes categorias:</p>
+    <table>
+        <tr><th>Tipo de Fluxo</th><th>O que inclui?</th></tr>
+        <tr><td><span class="emoji">🔹</span> Fluxo de Caixa Operacional</td><td>Receitas e despesas do dia a dia da empresa (vendas, pagamentos de fornecedores, salários).</td></tr>
+        <tr><td><span class="emoji">🔹</span> Fluxo de Caixa de Investimentos</td><td>Compra e venda de ativos fixos, como máquinas, equipamentos, imóveis.</td></tr>
+        <tr><td><span class="emoji">🔹</span> Fluxo de Caixa de Financiamento</td><td>Empréstimos, financiamentos e pagamentos de dividendos.</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Exemplo Simples da Estrutura do Fluxo de Caixa</strong></p>
+    <table>
+        <tr><th>Item</th><th>Valor (R$)</th></tr>
+        <tr><td colspan="2"><strong>Fluxo de Caixa Operacional</strong></td></tr>
+        <tr><td>Entradas de Clientes (à vista)</td><td>30.000,00</td></tr>
+        <tr><td>Recebimentos de Clientes (parcelados)</td><td>20.000,00</td></tr>
+        <tr><td>(-) Pagamento de Fornecedores</td><td>(15.000,00)</td></tr>
+        <tr><td>(-) Pagamento de Salários</td><td>(10.000,00)</td></tr>
+        <tr><td>(-) Pagamento de Aluguel</td><td>(5.000,00)</td></tr>
+        <tr><td><strong>Saldo do Fluxo Operacional</strong></td><td>20.000,00</td></tr>
+        <tr><td colspan="2"><strong>Fluxo de Caixa de Investimentos</strong></td></tr>
+        <tr><td>(-) Compra de Máquinas</td><td>(10.000,00)</td></tr>
+        <tr><td><strong>Saldo do Fluxo de Investimentos</strong></td><td>(10.000,00)</td></tr>
+        <tr><td colspan="2"><strong>Fluxo de Caixa de Financiamento</strong></td></tr>
+        <tr><td>(+) Empréstimo Bancário</td><td>50.000,00</td></tr>
+        <tr><td>(-) Pagamento de Juros do Empréstimo</td><td>(5.000,00)</td></tr>
+        <tr><td><strong>Saldo do Fluxo de Financiamento</strong></td><td>45.000,00</td></tr>
+        <tr><td><strong>Saldo Final do Caixa</strong></td><td>55.000,00</td></tr>
+    </table>
+    <p><span class="emoji">🔹</span> Isso significa que a empresa tem R$ 55.000,00 em caixa disponível para o próximo período.</p>
+
+    <h3>4️⃣ Exemplo Simples de Fluxo de Caixa</h3>
+    <p>Vamos supor que uma loja de roupas registre as seguintes operações no mês:</p>
+    <table>
+        <tr><th>Data</th><th>Descrição</th><th>Entrada (R$)</th><th>Saída (R$)</th><th>Saldo Acumulado (R$)</th></tr>
+        <tr><td>01/02</td><td>Saldo Inicial</td><td>5.000,00</td><td>-</td><td>5.000,00</td></tr>
+        <tr><td>05/02</td><td>Venda à vista</td><td>8.000,00</td><td>-</td><td>13.000,00</td></tr>
+        <tr><td>10/02</td><td>Pagamento de fornecedor</td><td>-</td><td>(4.000,00)</td><td>9.000,00</td></tr>
+        <tr><td>15/02</td><td>Venda a prazo (não entra no caixa)</td><td>-</td><td>-</td><td>9.000,00</td></tr>
+        <tr><td>20/02</td><td>Pagamento de aluguel</td><td>-</td><td>(2.000,00)</td><td>7.000,00</td></tr>
+        <tr><td>25/02</td><td>Cliente pagou parcela</td><td>3.000,00</td><td>-</td><td>10.000,00</td></tr>
+        <tr><td>28/02</td><td>Compra de mercadorias</td><td>-</td><td>(5.000,00)</td><td>5.000,00</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusões:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Mesmo tendo vendido a prazo, o dinheiro não entrou de imediato, o que poderia gerar problemas de liquidez.</li>
+        <li><span class="emoji">✔️</span> No final do mês, a empresa ainda tem um saldo positivo de R$ 5.000,00.</li>
+        <li><span class="emoji">✔️</span> Se as saídas tivessem sido maiores que as entradas, a empresa precisaria de um empréstimo ou ajuste no planejamento financeiro.</li>
+    </ul>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 1/5</strong></p>
+    <p>Agora já sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> O que é o Fluxo de Caixa e sua importância.</li>
+        <li><span class="emoji">✅</span> A diferença entre lucro e fluxo de caixa.</li>
+        <li><span class="emoji">✅</span> Como a estrutura do fluxo de caixa é organizada.</li>
+        <li><span class="emoji">✅</span> Como analisar um exemplo simples de fluxo de caixa.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 2/5, vamos aprofundar o Fluxo de Caixa Operacional, entender as principais fontes de entradas e saídas e como calcular o saldo operacional! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 2/5 -->
+    <h2>📚 Parte 2/5 - Fluxo de Caixa Operacional</h2>
+    <p>Na primeira parte, aprendemos o que é o fluxo de caixa, sua importância, diferença entre lucro e fluxo de caixa e sua estrutura básica. Agora, vamos aprofundar a análise do Fluxo de Caixa Operacional (FCO), que representa as atividades do dia a dia da empresa.</p>
+    <p>Nesta segunda parte, veremos:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é o Fluxo de Caixa Operacional (FCO)?</li>
+        <li><span class="emoji">2️⃣</span> Principais Entradas e Saídas do Fluxo Operacional</li>
+        <li><span class="emoji">3️⃣</span> Cálculo do Fluxo de Caixa Operacional - Método Direto e Indireto</li>
+        <li><span class="emoji">4️⃣</span> Exemplo Prático de Fluxo de Caixa Operacional</li>
+    </ul>
+
+    <h3>1️⃣ O que é o Fluxo de Caixa Operacional (FCO)?</h3>
+    <p>O Fluxo de Caixa Operacional representa as entradas e saídas de dinheiro relacionadas às operações normais da empresa.</p>
+    <p><span class="emoji">📌</span> <strong>Por que o FCO é importante?</strong></p>
+    <ul>
+        <li><span class="emoji">✅</span> Mostra se a empresa gera dinheiro suficiente para se sustentar.</li>
+        <li><span class="emoji">✅</span> Permite avaliar se o modelo de negócio está saudável.</li>
+        <li><span class="emoji">✅</span> Ajuda a planejar pagamentos de fornecedores, salários e despesas recorrentes.</li>
+        <li><span class="emoji">✅</span> Empresas que geram caixa positivo de forma constante são mais sustentáveis.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> Se o FCO for positivo: a empresa está gerando mais dinheiro do que gastando com suas atividades principais.</p>
+    <p><span class="emoji">🔹</span> Se o FCO for negativo: a empresa está gastando mais do que recebe e pode precisar de financiamento ou cortes de custos.</p>
+
+    <h3>2️⃣ Principais Entradas e Saídas do Fluxo Operacional</h3>
+    <p>O FCO é composto por entradas de caixa (recebimentos de clientes, pagamentos à vista, etc.) e saídas de caixa (salários, aluguel, impostos, fornecedores, etc.).</p>
+    <table>
+        <tr><th>Categoria</th><th>Exemplos</th></tr>
+        <tr><td><span class="emoji">🔹</span> Entradas de Caixa</td><td>Recebimentos de clientes, vendas à vista, recebimentos de vendas parceladas, devoluções de fornecedores, adiantamentos de clientes.</td></tr>
+        <tr><td><span class="emoji">🔹</span> Saídas de Caixa</td><td>Pagamentos de fornecedores, salários, aluguel, despesas com água/luz/internet, impostos, despesas operacionais.</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> <strong>Importante:</strong> Apenas transações que movimentam dinheiro entram no fluxo de caixa. Se uma venda foi feita a prazo e o pagamento será recebido no futuro, não entra no FCO até o dinheiro cair no caixa.</p>
+
+    <h3>3️⃣ Cálculo do Fluxo de Caixa Operacional</h3>
+    <p>O FCO pode ser calculado de duas formas:</p>
+    <ul>
+        <li><strong>Método Direto:</strong> Considera todas as entradas e saídas de dinheiro individualmente.</li>
+        <li><strong>Método Indireto:</strong> Ajusta o lucro líquido, eliminando efeitos contábeis como depreciação e provisões.</li>
+    </ul>
+    <p><span class="emoji">🔹</span> <strong>Método Direto (Mais utilizado para pequenos negócios)</strong></p>
+    <p>No método direto, somamos todas as entradas e subtraímos todas as saídas do período.</p>
+    <p><span class="emoji">📌</span> <strong>Fórmula:</strong></p>
+    <p>FCO = (Entradas de Caixa) − (Saídas de Caixa)</p>
+    <p><span class="emoji">📌</span> <strong>Exemplo:</strong></p>
+    <p>Uma empresa registrou os seguintes valores no mês:</p>
+    <table>
+        <tr><th>Categoria</th><th>Valor (R$)</th></tr>
+        <tr><td>Recebimentos de Clientes</td><td>50.000,00</td></tr>
+        <tr><td>Outras Entradas</td><td>5.000,00</td></tr>
+        <tr><td>Pagamento de Fornecedores</td><td>(20.000,00)</td></tr>
+        <tr><td>Salários e Benefícios</td><td>(15.000,00)</td></tr>
+        <tr><td>Aluguel e Despesas Fixas</td><td>(10.000,00)</td></tr>
+        <tr><td>Impostos e Taxas</td><td>(3.000,00)</td></tr>
+        <tr><td><strong>Fluxo de Caixa Operacional</strong></td><td>7.000,00</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> <strong>Conclusão:</strong> O FCO positivo indica que a empresa gerou R$ 7.000,00 de caixa líquido com suas operações.</p>
+    <p><span class="emoji">🔹</span> <strong>Método Indireto (Usado em empresas maiores)</strong></p>
+    <p>No método indireto, começamos com o Lucro Líquido e ajustamos itens que não envolvem saída de caixa, como depreciação, variação de estoques e provisões.</p>
+    <p><span class="emoji">📌</span> <strong>Fórmula:</strong></p>
+    <p>FCO = (Lucro Líquido) + (Depreciação e Amortização) + (Variações no Capital de Giro)</p>
+    <p><span class="emoji">📌</span> <strong>Exemplo:</strong></p>
+    <p>Uma empresa registrou os seguintes valores no mês:</p>
+    <table>
+        <tr><th>Categoria</th><th>Valor (R$)</th></tr>
+        <tr><td>Lucro Líquido</td><td>50.000,00</td></tr>
+        <tr><td>(+) Depreciação</td><td>3.000,00</td></tr>
+        <tr><td>(+) Aumento de Contas a Pagar</td><td>5.000,00</td></tr>
+        <tr><td>(-) Aumento de Estoques</td><td>(7.000,00)</td></tr>
+        <tr><td>(-) Aumento de Contas a Receber</td><td>(10.000,00)</td></tr>
+        <tr><td><strong>Fluxo de Caixa Operacional</strong></td><td>41.000,00</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> <strong>Conclusão:</strong> Apesar de um lucro de R$ 50.000,00, o fluxo de caixa operacional foi menor (R$ 41.000,00), porque a empresa aumentou o estoque e teve mais vendas a prazo.</p>
+
+    <h3>4️⃣ Exemplo Prático de Fluxo de Caixa Operacional</h3>
+    <p>Vamos montar um fluxo de caixa operacional detalhado para um restaurante que funciona em um shopping.</p>
+    <p><span class="emoji">📌</span> <strong>Fluxo de Caixa Operacional do Restaurante “Sabor & Cia”</strong></p>
+    <table>
+        <tr><th>Descrição</th><th>Valor (R$)</th></tr>
+        <tr><td colspan="2"><strong>Receitas (Entradas de Caixa)</strong></td></tr>
+        <tr><td>Vendas à Vista</td><td>80.000,00</td></tr>
+        <tr><td>Recebimentos de Cartões (Vendas Parceladas)</td><td>20.000,00</td></tr>
+        <tr><td><strong>Total de Entradas</strong></td><td>100.000,00</td></tr>
+        <tr><td colspan="2"><strong>Despesas (Saídas de Caixa)</strong></td></tr>
+        <tr><td>Pagamento de Fornecedores</td><td>(40.000,00)</td></tr>
+        <tr><td>Aluguel do Ponto Comercial</td><td>(10.000,00)</td></tr>
+        <tr><td>Salários e Benefícios</td><td>(25.000,00)</td></tr>
+        <tr><td>Contas de Água, Luz e Internet</td><td>(5.000,00)</td></tr>
+        <tr><td>Impostos e Taxas</td><td>(7.000,00)</td></tr>
+        <tr><td><strong>Total de Saídas</strong></td><td>(87.000,00)</td></tr>
+        <tr><td><strong>Saldo do Fluxo de Caixa Operacional</strong></td><td>13.000,00</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusão:</strong></p>
+    <ul>
+        <li><span class="emoji">➡️</span> O restaurante teve entradas de R$ 100.000,00 e saídas de R$ 87.000,00.</li>
+        <li><span class="emoji">➡️</span> O saldo do Fluxo de Caixa Operacional foi positivo em R$ 13.000,00, indicando que o negócio gerou dinheiro suficiente para cobrir seus custos e ainda sobrou caixa.</li>
+        <li><span class="emoji">➡️</span> Se o saldo fosse negativo, o restaurante precisaria buscar um financiamento, cortar custos ou melhorar suas receitas.</li>
+    </ul>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 2/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> O que é o Fluxo de Caixa Operacional e por que ele é importante.</li>
+        <li><span class="emoji">✅</span> Quais são as principais entradas e saídas do FCO.</li>
+        <li><span class="emoji">✅</span> Como calcular o FCO pelo método direto e indireto.</li>
+        <li><span class="emoji">✅</span> Como analisar um exemplo prático de FCO.</li>
+    </ul>
+    <p><span class="emoji">🔜</span> Na parte 3/5, vamos explorar o Fluxo de Caixa de Investimentos (FCI) e entender como ele afeta a liquidez da empresa! <span class="emoji">🚀</span></p>
+
+    <!-- Parte 3/5 -->
+    <h2>📚 Parte 3/5 - Fluxo de Caixa de Investimentos</h2>
+    <p>Na parte 2, aprendemos sobre o Fluxo de Caixa Operacional (FCO), que mostra as receitas e despesas do dia a dia da empresa. Agora, vamos explorar o Fluxo de Caixa de Investimentos (FCI), que representa as movimentações financeiras ligadas à compra e venda de ativos.</p>
+    <p>Nesta terceira parte, vamos entender:</p>
+    <ul>
+        <li><span class="emoji">1️⃣</span> O que é o Fluxo de Caixa de Investimentos (FCI)?</li>
+        <li><span class="emoji">2️⃣</span> Principais Entradas e Saídas do FCI</li>
+        <li><span class="emoji">3️⃣</span> Impacto do FCI na Liquidez da Empresa</li>
+        <li><span class="emoji">4️⃣</span> Exemplo Prático de Fluxo de Caixa de Investimentos</li>
+    </ul>
+
+    <h3>1️⃣ O que é o Fluxo de Caixa de Investimentos (FCI)?</h3>
+    <p>O Fluxo de Caixa de Investimentos (FCI) mostra o dinheiro usado para comprar ou vender ativos fixos e realizar investimentos financeiros. Ele não está ligado às operações do dia a dia, mas sim a decisões estratégicas de longo prazo.</p>
+    <p><span class="emoji">📌</span> <strong>Exemplos de atividades que afetam o FCI:</strong></p>
+    <ul>
+        <li><span class="emoji">✔️</span> Compra de máquinas, veículos e equipamentos</li>
+        <li><span class="emoji">✔️</span> Venda de ativos da empresa</li>
+        <li><span class="emoji">✔️</span> Aquisição de imóveis, terrenos ou novas instalações</li>
+        <li><span class="emoji">✔️</span> Investimentos financeiros (ações, aplicações, fundos de investimento, criptomoedas, etc.)</li>
+    </ul>
+    <p><span class="emoji">🔹</span> Se o FCI for negativo: significa que a empresa está investindo em crescimento (o que pode ser bom, desde que bem planejado).</p>
+    <p><span class="emoji">🔹</span> Se o FCI for positivo: indica que a empresa está vendendo ativos ou resgatando investimentos, podendo gerar caixa extra.</p>
+
+    <h3>2️⃣ Principais Entradas e Saídas do FCI</h3>
+    <p>O FCI pode registrar entradas de caixa (vendas de ativos) e saídas de caixa (compras de ativos ou investimentos).</p>
+    <table>
+        <tr><th>Categoria</th><th>Exemplos</th></tr>
+        <tr><td><span class="emoji">🔹</span> Entradas no FCI</td><td>Venda de equipamentos antigos, venda de imóveis, resgate de aplicações financeiras, alienação de veículos.</td></tr>
+        <tr><td><span class="emoji">🔹</span> Saídas no FCI</td><td>Compra de máquinas, compra de novos pontos comerciais, aquisição de veículos, investimentos financeiros de longo prazo.</td></tr>
+    </table>
+    <p><span class="emoji">💡</span> <strong>Exemplo Rápido:</strong> Se uma empresa vendeu um carro usado por R$ 50.000,00, isso aparece como entrada no FCI. Se ela usou R$ 200.000,00 para comprar novas máquinas, essa será uma saída.</p>
+    <p><span class="emoji">📌</span> Saldo do FCI = Entradas - Saídas</p>
+
+    <h3>3️⃣ Impacto do FCI na Liquidez da Empresa</h3>
+    <p>O FCI pode afetar diretamente a liquidez da empresa, pois um investimento aumenta o patrimônio, mas reduz o caixa disponível no curto prazo.</p>
+    <p><span class="emoji">📌</span> <strong>Cenário 1: Expansão Estratégica (FCI Negativo)</strong></p>
+    <p>Imagine que uma empresa decide investir R$ 500.000,00 em novas máquinas. Esse valor sai do caixa, mas pode aumentar a produtividade e os lucros no futuro.</p>
+    <p><span class="emoji">📌</span> <strong>Cenário 2: Liquidez de Emergência (FCI Positivo)</strong></p>
+    <p>Se a empresa está sem dinheiro e vende um galpão por R$ 1.000.000,00, essa entrada melhora a liquidez, mas pode comprometer a estrutura do negócio se o galpão era essencial.</p>
+    <p><span class="emoji">💡</span> <strong>Conclusão:</strong> O FCI precisa ser bem planejado. Gastar dinheiro em investimentos pode ser bom para o futuro, mas se a empresa não tiver caixa suficiente, pode acabar enfrentando dificuldades financeiras no curto prazo.</p>
+
+    <h3>4️⃣ Exemplo Prático de Fluxo de Caixa de Investimentos</h3>
+    <p>Vamos considerar uma empresa de logística, que decidiu modernizar sua frota de caminhões e, ao mesmo tempo, vender veículos antigos.</p>
+    <p><span class="emoji">📌</span> <strong>Fluxo de Caixa de Investimentos da Transportadora Rápida Ltda.</strong></p>
+    <table>
+        <tr><th>Descrição</th><th>Valor (R$)</th></tr>
+        <tr><td colspan="2"><strong>Entradas (Vendas de Ativos e Resgates de Investimentos)</strong></td></tr>
+        <tr><td>Venda de Caminhões Antigos</td><td>200.000,00</td></tr>
+        <tr><td>Resgate de Investimentos Financeiros</td><td>50.000,00</td></tr>
+        <tr><td><strong>Total de Entradas</strong></td><td>250.000,00</td></tr>
+        <tr><td colspan="2"><strong>Saídas (Novos Ativos e Aplicações)</strong></td></tr>
+        <tr><td>Compra de Novos Caminhões</td><td>(400.000,00)</td></tr>
+        <tr><td>Compra de Equipamentos</td><td>(50.000,00)</td></tr>
+        <tr><td>Aplicação Financeira de Longo Prazo</td><td>(20.000,00)</td></tr>
+        <tr><td><strong>Total de Saídas</strong></td><td>(470.000,00)</td></tr>
+        <tr><td><strong>Saldo do Fluxo de Caixa de Investimentos</strong></td><td>(220.000,00)</td></tr>
+    </table>
+    <p><span class="emoji">📌</span> <strong>Conclusão:</strong></p>
+    <ul>
+        <li><span class="emoji">➡️</span> A empresa investiu mais do que recebeu, resultando em um FCI negativo de R$ 220.000,00.</li>
+        <li><span class="emoji">➡️</span> Apesar do caixa estar reduzido agora, os novos caminhões podem gerar economia de combustível e aumento da capacidade de entrega no futuro.</li>
+        <li><span class="emoji">➡️</span> Se esse investimento não fosse planejado corretamente, a empresa poderia enfrentar problemas financeiros a curto prazo.</li>
+    </ul>
+
+    <p><span class="emoji">📊</span> <strong>Resumo da Parte 3/5</strong></p>
+    <p>Agora sabemos:</p>
+    <ul>
+        <li><span class="emoji">✅</span> O que é o Fluxo de Caixa
