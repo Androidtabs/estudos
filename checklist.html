@@ -51,6 +51,17 @@
         .emoji {
             margin-right: 8px;
         }
+        .aviso {
+            font-size: 18px;
+            color: #34495e; /* Mesma cor dos outros textos */
+            font-weight: bold;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .aviso .emoji {
+            font-size: 24px; /* Emoji maior apenas no aviso */
+        }
     </style>
 </head>
 <body>
@@ -63,11 +74,11 @@
         <h2>Espera um rompimento 🚀</h2>
         <div class="checkbox-group">
             <label><input type="checkbox"><span class="emoji">💥</span> Rompeu?</label>
-            <label><input type="checkbox"><span class="emoji">📉</span> Fez uma correção nesse topo rompido?</label>
+            <label><input type="checkbox"><span class="emoji">📉</span> Fez uma correção nesse topo/fundo rompido?</label>
             <label><input type="checkbox"><span class="emoji">📊</span> Está perto da média móvel?</label>
             <label><input type="checkbox"><span class="emoji">🛡️</span> Está protegido pela média móvel?</label>
             <label><input type="checkbox"><span class="emoji">📈</span> Está numa LTA?</label>
-            <label><input type="checkbox"><span class="emoji">🚦</span> Entra no sinal.</label>
+            <div class="aviso"><span class="emoji">🚦</span> Entra no sinal.</div>
         </div>
     </div>
 </body>
