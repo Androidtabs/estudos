@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação de Pullback em Região Rompida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin: 30px 0 15px;
+            font-size: 1.6em;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background: #3498db;
+            bottom: -5px;
+            left: 0;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+            transition: transform 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📈 Operação de Pullback em Região Rompida</h1>
+        
+        <div class="card">
+            <h2>🔹 Introdução</h2>
+            <p>O <span class="highlight">Pullback</span> ocorre quando o preço retorna para testar uma região de suporte ou resistência após um rompimento. Esse teste pode oferecer oportunidades estratégicas de entrada para traders que buscam seguir a tendência do mercado.</p>
+        </div>
+        
+        <h2>📌 Conceitos Fundamentais</h2>
+        <ul>
+            <li>📉 <strong>Suporte:</strong> Nível onde o preço tende a parar de cair.</li>
+            <li>📈 <strong>Resistência:</strong> Nível onde o preço tende a parar de subir.</li>
+            <li>🚀 <strong>Rompimento:</strong> Quando o preço atravessa um suporte ou resistência.</li>
+            <li>🔄 <strong>Pullback:</strong> Retorno do preço à região rompida para um possível teste antes da continuação da tendência.</li>
+        </ul>
+        
+        <h2>✅ Identificação de Suportes e Resistências</h2>
+        <p>Para operar pullbacks com eficiência, é essencial identificar corretamente regiões importantes do gráfico, como:</p>
+        <ul>
+            <li>🔹 Topos e fundos anteriores</li>
+            <li>📊 Médias móveis atuando como suporte/resistência dinâmica</li>
+            <li>📏 Níveis de Fibonacci (38.2%, 50%, 61.8%)</li>
+        </ul>
+        
+        <div class="card">
+            <h2>🧐 Confirmação do Rompimento</h2>
+            <p>Antes de operar um pullback, é fundamental confirmar que o rompimento foi legítimo:</p>
+            <ul>
+                <li>✅ Fechamento do candle acima/abaixo da resistência/suporte</li>
+                <li>📊 Volume crescente no rompimento</li>
+                <li>📉 Contexto de tendência favorável</li>
+            </ul>
+        </div>
+        
+        <h2>🎯 Momento da Entrada</h2>
+        <div class="card">
+            <h3>📌 Pullback de Compra</h3>
+            <ol>
+                <li>Identificar a resistência rompida</li>
+                <li>Aguardar o reteste do nível</li>
+                <li>Observar rejeição do preço (ex: martelo, engolfo de alta)</li>
+                <li>Entrada no rompimento da máxima do candle de confirmação</li>
+                <li>Stop-loss abaixo do suporte recém-formado</li>
+                <li>Take-profit no próximo topo relevante</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>📌 Pullback de Venda</h3>
+            <ol>
+                <li>Identificar o suporte rompido</li>
+                <li>Aguardar o reteste do nível</li>
+                <li>Observar rejeição do preço (ex: engolfo de baixa, doji)</li>
+                <li>Entrada no rompimento da mínima do candle de confirmação</li>
+                <li>Stop-loss acima da resistência recém-formada</li>
+                <li>Take-profit no próximo suporte relevante</li>
+            </ol>
+        </div>
+        
+        <h2>🛠 Estratégias de Confirmação</h2>
+        <ul>
+            <li>📉 <strong>Padrões de Candle:</strong> Martelo, Engolfo, Doji</li>
+            <li>📊 <strong>Indicadores Técnicos:</strong> Médias móveis, Volume, RSI</li>
+            <li>🔍 <strong>Confluência:</strong> Analisar múltiplos fatores para confirmar a entrada</li>
+        </ul>
+        
+        <h2>📊 Gerenciamento de Risco</h2>
+        <ul>
+            <li>🎯 Stop-loss bem posicionado para minimizar perdas</li>
+            <li>💰 Relação risco-recompensa adequada (ex: 1:2 ou 1:3)</li>
+            <li>🚦 Evitar mover o stop prematuramente</li>
+        </ul>
+        
+        <div class="card">
+            <h2>⚠️ Possíveis Armadilhas</h2>
+            <ul>
+                <li>🚨 Falsos rompimentos (<em>fakeouts</em>)</li>
+                <li>📉 Pullbacks muito profundos que invalidam o rompimento</li>
+                <li>📢 Influência de notícias e eventos macroeconômicos</li>
+            </ul>
+        </div>
+        
+        <h2>🏆 Conclusão</h2>
+        <p>O pullback em região rompida é uma estratégia poderosa para traders que buscam operações de alta probabilidade dentro da tendência. Para maximizar o sucesso, siga estas etapas:</p>
+        <ul>
+            <li>📌 Identifique suportes e resistências corretamente</li>
+            <li>🔍 Confirme rompimentos antes de entrar</li>
+            <li>🎯 Aguarde sinais claros no pullback</li>
+            <li>💰 Gerencie o risco e mantenha disciplina</li>
+        </ul>
+        
+        <p>📚 <strong>Referências Sugeridas:</strong></p>
+        <ul>
+            <li>📖 <em>Technical Analysis of the Financial Markets</em> - John Murphy</li>
+            <li>📖 <em>Japanese Candlestick Charting Techniques</em> - Steve Nison</li>
+            <li>📖 <em>Come Into My Trading Room</em> - Alexander Elder</li>
+        </ul>
+    </div>
+</body>
+</html>
