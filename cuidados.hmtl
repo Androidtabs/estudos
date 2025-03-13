@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo de Vida ✨</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px 0;
+            font-size: 1.2em;
+        }
+        .emoji {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Um Estilo de Vida Impecável ✨</h1>
+
+    <div class="section">
+        <h2>Cuidados Pessoais 💈</h2>
+        <ul>
+            <li><span class="emoji">✂️</span> Barba e cabelos sempre aparados</li>
+            <li><span class="emoji">🧔</span> Sem fios soltos brancos na barba</li>
+            <li><span class="emoji">🧴</span> Perfumado, com creme e protetor</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Casa e Carro 🏡🚗</h2>
+        <ul>
+            <li><span class="emoji">🧹</span> Casa sempre arrumada e perfumada</li>
+            <li><span class="emoji">🚘</span> Carro impecável ao sair com alguém</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Alimentação Saudável 🍽️</h2>
+        <ul>
+            <li><span class="emoji">🥗</span> Comida caseira: iogurte, aveia, laranja, ovos</li>
+            <li><span class="emoji">💧</span> Água sempre presente</li>
+            <li><span class="emoji">🍝</span> Massas deliciosas</li>
+            <li><span class="emoji">🐟</span> Peixe ou frango com saladas</li>
+            <li><span class="emoji">🍣</span> Sushi como opção especial</li>
+            <li><span class="emoji">☕</span> Chá da tarde ou café da manhã</li>
+            <li><span class="emoji">🧀</span> Tábua de frios, frutas ou queijos</li>
+            <li><span class="emoji">🍷</span> Só bebe vinhos</li>
+            <li><span class="emoji">🍤</span> Bacalhau e salmão no lugar de carne</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Rotina e Habilidades ⏰</h2>
+        <ul>
+            <li><span class="emoji">📅</span> Rotina produtiva</li>
+            <li><span class="emoji">🚦</span> Dirige bem</li>
+        </ul>
+    </div>
+</body>
+</html>
