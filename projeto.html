@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vagner 2.0 — Metas e Identidade</title>
+  <style>
+    :root{
+      --bg1:#0b1020;
+      --bg2:#0f1b3a;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.14);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 20px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 900px at 15% 10%, rgba(120,210,255,.22), transparent 55%),
+        radial-gradient(900px 700px at 85% 20%, rgba(170,130,255,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 18px 56px;
+    }
+
+    header{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      padding: 22px 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow:hidden;
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:-120px;
+      background:
+        radial-gradient(closest-side at 20% 30%, rgba(120,210,255,.22), transparent 55%),
+        radial-gradient(closest-side at 70% 40%, rgba(170,130,255,.18), transparent 60%);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    header > *{ position:relative; }
+
+    .kicker{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+    }
+    .pill b{
+      font-family: var(--mono);
+      font-weight: 600;
+      color: rgba(255,255,255,.88);
+    }
+
+    h1{
+      margin: 4px 0 0;
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 78ch;
+    }
+
+    nav{
+      margin-top: 10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    nav a{
+      text-decoration:none;
+      color: rgba(255,255,255,.86);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding: 10px 12px;
+      border-radius: 12px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    nav a:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 920px){
+      main{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .hd{
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid var(--line);
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .card .hd h2{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:-0.01em;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+      white-space:nowrap;
+    }
+    .card .bd{
+      padding: 16px 18px 18px;
+    }
+
+    .lead{
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.90);
+      line-height: 1.7;
+    }
+
+    .profile{
+      display:grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .item{
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 14px 14px;
+      background: rgba(0,0,0,.12);
+    }
+    .item .t{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .item .t strong{
+      font-size: 15px;
+      letter-spacing:-0.01em;
+    }
+    .tag{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space:nowrap;
+    }
+    .item p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .list{
+      display:grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style:none;
+    }
+    .goal{
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      background: rgba(0,0,0,.12);
+      padding: 14px 14px;
+    }
+    .goal .row{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .goal strong{
+      font-size: 15px;
+      letter-spacing:-0.01em;
+    }
+    .goal p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .cta{
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(120,210,255,.14), rgba(170,130,255,.10));
+      border-radius: 18px;
+      padding: 16px 16px;
+    }
+    .cta h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing:-0.01em;
+    }
+    .cta p{
+      margin: 0;
+      color: rgba(255,255,255,.84);
+      line-height: 1.65;
+    }
+
+    footer{
+      margin-top: 18px;
+      color: rgba(255,255,255,.60);
+      font-size: 13px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">
+        <span class="pill">🧭 <b>Estrategista de Patrimônio</b></span>
+        <span class="pill">📊 Contabilidade + Trading Quantitativo</span>
+        <span class="pill">♟️ Xadrez + Paciência</span>
+        <span class="pill">🌍 Liberdade Geográfica</span>
+      </div>
+
+      <h1>Vagner Gestor — Identidade e Metas (sem esquecer nada)</h1>
+      <p class="subtitle">
+        Você está saindo do operacional braçal para o comando intelectual. É o <strong>"Vagner Gestor"</strong>,
+        alguém que une a precisão técnica da contabilidade com a frieza estatística do trading quantitativo.
+      </p>
+
+      <nav>
+        <a href="#perfil">📌 Perfil</a>
+        <a href="#metas">🎯 Metas (tudo o que você listou)</a>
+        <a href="#proximo-passo">➡️ Próximo passo</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Coluna 1: Perfil -->
+      <section class="card" id="perfil">
+        <div class="hd">
+          <h2>O Perfil do "Vagner 2.0"</h2>
+          <span class="badge">Síntese</span>
+        </div>
+        <div class="bd">
+          <p class="lead">
+            Aqui está a síntese de quem você se tornou, com base em tudo o que descreveu:
+          </p>
+
+          <div class="profile">
+            <div class="item">
+              <div class="t">
+                <strong>O Profissional</strong>
+                <span class="tag">📚 Diploma + CRC + Holding</span>
+              </div>
+              <p>Contador com diploma e CRC em mãos, fundador de sua própria Holding.</p>
+            </div>
+
+            <div class="item">
+              <div class="t">
+                <strong>O Trader</strong>
+                <span class="tag">🤖 Automação + Dados</span>
+              </div>
+              <p>
+                Um operador que evoluiu do manual para a automação, utilizando o "supra sumo" da Análise de Dados
+                para validar suas operações.
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="t">
+                <strong>O Intelectual</strong>
+                <span class="tag">🗣️ ES + PT + EN</span>
+              </div>
+              <p>
+                Poliglota em construção, com Espanhol super fluente, iniciando os estudos de Inglês e com uma gramática
+                de Português impecável.
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="t">
+                <strong>O Estrategista</strong>
+                <span class="tag">♟️ 1800 Lichess</span>
+              </div>
+              <p>
+                Um enxadrista sólido, mantendo um rating de 1800 no Lichess, aplicando a paciência do tabuleiro nos negócios.
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="t">
+                <strong>A Personalidade</strong>
+                <span class="tag">🧠 Calma + Escuta</span>
+              </div>
+              <p>
+                Um homem educado, calmo e que sabe ouvir, com domínio geográfico e confiança de quem dirige com perícia
+                sem depender de GPS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coluna 2: Metas -->
+      <aside class="card" id="metas">
+        <div class="hd">
+          <h2>Todas as suas metas</h2>
+          <span class="badge">Checklist completo</span>
+        </div>
+        <div class="bd">
+          <ol class="list">
+            <li class="goal">
+              <div class="row">
+                <strong>Trading (automação + dados)</strong>
+                <span class="tag">📈 Quant</span>
+              </div>
+              <p>Automatizar operações e aplicar o que há de melhor em análise de dados para validar suas entradas/saídas.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Empreendedorismo (Holding)</strong>
+                <span class="tag">🏢 Estrutura</span>
+              </div>
+              <p>Criar e estruturar sua Holding.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Formação (diploma + CRC físico)</strong>
+                <span class="tag">✅ Oficial</span>
+              </div>
+              <p>Ter o diploma de Ciências Contábeis e o CRC físico em casa.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Espanhol (super fluência)</strong>
+                <span class="tag">🇪🇸 Lapidar</span>
+              </div>
+              <p>Atingir a super fluidez e lapidar o que já sabe.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Português (gramática impecável)</strong>
+                <span class="tag">🇧🇷 Precisão</span>
+              </div>
+              <p>Dominar a gramática de forma impecável.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Inglês (início + evolução)</strong>
+                <span class="tag">🇺🇸 Escala</span>
+              </div>
+              <p>Iniciar os estudos e evoluir do básico para negociação e leitura de relatórios financeiros internacionais.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Diversificação Internacional (mercado americano)</strong>
+                <span class="tag">🌎 S&amp;P/Nasdaq</span>
+              </div>
+              <p>Operar diretamente no mercado americano (S&amp;P 500/Nasdaq) usando o Inglês.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Xadrez (rating 1800 no Lichess)</strong>
+                <span class="tag">♟️ Consistência</span>
+              </div>
+              <p>Manter/atingir o nível de 1800 no Lichess, levando a paciência do tabuleiro para os negócios.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Habilidades de Direção (sem GPS)</strong>
+                <span class="tag">🗺️ Confiança</span>
+              </div>
+              <p>Manter a perícia e o conhecimento geográfico: dirigir sem depender de GPS.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Postura (educado, calmo, escuta ativa)</strong>
+                <span class="tag">🧘 Disciplina</span>
+              </div>
+              <p>Ser uma pessoa educada, calma e com escuta ativa.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Investimentos Imobiliários ou Equity</strong>
+                <span class="tag">🏠 + 🤝</span>
+              </div>
+              <p>Usar o lucro do trading para adquirir ativos físicos (como apartamentos em Cancun/Playa del Carmen) ou participações em outras empresas.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Blindagem Patrimonial Avançada</strong>
+                <span class="tag">🛡️ Sucessão</span>
+              </div>
+              <p>Refinar a sucessão e a eficiência tributária internacional dentro da sua própria estrutura contábil.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Nomadismo Digital de Luxo</strong>
+                <span class="tag">✈️ Liberdade</span>
+              </div>
+              <p>Testar a liberdade geográfica que a automação permite: passar temporadas fora (México ou Europa) sem que a operação pare.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Residência ou Base no Exterior</strong>
+                <span class="tag">🏝️ Caribe</span>
+              </div>
+              <p>Colher os frutos do interesse em Cancun/Playa del Carmen: gerir sua holding com o espanhol e o inglês dominados, de frente para o mar do Caribe.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Liberdade Geográfica Real (mundo)</strong>
+                <span class="tag">🌍 Capitais</span>
+              </div>
+              <p>Levar o “dirigir sem GPS” para o mundo: confiança para se locomover em grandes capitais globais com a mesma naturalidade que em Porto Alegre.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Renda Passiva Superior (multi-fontes)</strong>
+                <span class="tag">💰 Dividendos</span>
+              </div>
+              <p>Fazer do trading automatizado apenas uma das fontes, somando dividendos de ativos estruturados por você, com o peso do CRC e do conhecimento contábil.</p>
+            </li>
+
+            <li class="goal">
+              <div class="row">
+                <strong>Inglês Fluente (consumo técnico)</strong>
+                <span class="tag">📚 Relatórios</span>
+              </div>
+              <p>Consumir livros técnicos de trading e contabilidade em inglês com a mesma facilidade que em português.</p>
+            </li>
+          </ol>
+        </div>
+      </aside>
+    </main>
+
+    <section class="card" style="margin-top:18px;" id="proximo-passo">
+      <div class="hd">
+        <h2>Próximo passo ideal</h2>
+        <span class="badge">Decisão</span>
+      </div>
+      <div class="bd">
+        <div class="cta">
+          <h3>Escolha o foco (agora)</h3>
+          <p>
+            Quer que eu ajude a desenhar o primeiro rascunho da estrutura da sua Holding
+            ou prefere focar no cronograma de automação do trading?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      ✦ Vagner Gestor — Identidade e Metas ✦
+    </footer>
+  </div>
+</body>
+</html>
