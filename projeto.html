@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vagner 2.0 — Metas e Identidade</title>
+  <title>Estrategista | Gestor | Trader</title>
   <style>
     :root{
       --bg1:#0b1020;
@@ -97,7 +97,7 @@
       color: var(--muted);
       font-size: 16px;
       line-height: 1.65;
-      max-width: 78ch;
+      max-width: 84ch;
     }
 
     nav{
@@ -123,7 +123,7 @@
 
     main{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 18px;
       margin-top: 18px;
     }
@@ -173,40 +173,19 @@
       line-height: 1.7;
     }
 
-    .profile{
-      display:grid;
-      gap: 12px;
-      margin-top: 12px;
-    }
-    .item{
+    .block{
       border: 1px solid rgba(255,255,255,.10);
       border-radius: 16px;
       padding: 14px 14px;
       background: rgba(0,0,0,.12);
     }
-    .item .t{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
-      flex-wrap:wrap;
-    }
-    .item .t strong{
+    .block h3{
+      margin: 0 0 8px;
       font-size: 15px;
       letter-spacing:-0.01em;
     }
-    .tag{
-      font-family: var(--mono);
-      font-size: 12px;
-      color: rgba(255,255,255,.78);
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      padding: 6px 10px;
-      border-radius: 999px;
-      white-space:nowrap;
-    }
-    .item p{
-      margin: 10px 0 0;
+    .block p{
+      margin: 0;
       color: var(--muted);
       line-height: 1.65;
       font-size: 14px;
@@ -235,6 +214,16 @@
     .goal strong{
       font-size: 15px;
       letter-spacing:-0.01em;
+    }
+    .tag{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space:nowrap;
     }
     .goal p{
       margin: 10px 0 0;
@@ -275,86 +264,54 @@
       <div class="kicker">
         <span class="pill">🧭 <b>Estrategista de Patrimônio</b></span>
         <span class="pill">📊 Contabilidade + Trading Quantitativo</span>
-        <span class="pill">♟️ Xadrez + Paciência</span>
-        <span class="pill">🌍 Liberdade Geográfica</span>
+        <span class="pill">♟️ 1800 Lichess</span>
+        <span class="pill">🗺️ Direção sem GPS</span>
       </div>
 
-      <h1>Vagner Gestor — Identidade e Metas (sem esquecer nada)</h1>
+      <h1>Estrategista | Gestor | Trader</h1>
       <p class="subtitle">
-        Você está saindo do operacional braçal para o comando intelectual. É o <strong>"Vagner Gestor"</strong>,
-        alguém que une a precisão técnica da contabilidade com a frieza estatística do trading quantitativo.
+        Perfil &amp; Postura: Um homem educado, calmo e que sabe ouvir realmente as pessoas.
+        Possui domínio geográfico total, dirigindo com perícia e confiança sem depender de GPS.
+        No xadrez, um estrategista sólido mantendo 1800 no Lichess.
       </p>
 
       <nav>
-        <a href="#perfil">📌 Perfil</a>
-        <a href="#metas">🎯 Metas (tudo o que você listou)</a>
+        <a href="#objetivos">🎯 Objetivos</a>
+        <a href="#metas">✅ Metas (tudo o que você listou)</a>
         <a href="#proximo-passo">➡️ Próximo passo</a>
       </nav>
     </header>
 
     <main>
-      <!-- Coluna 1: Perfil -->
-      <section class="card" id="perfil">
+      <!-- Coluna 1: Objetivos (substitui "O Perfil do Vagner 2.0") -->
+      <section class="card" id="objetivos">
         <div class="hd">
-          <h2>O Perfil do "Vagner 2.0"</h2>
-          <span class="badge">Síntese</span>
+          <h2>Objetivos</h2>
+          <span class="badge">Base do projeto</span>
         </div>
         <div class="bd">
           <p class="lead">
-            Aqui está a síntese de quem você se tornou, com base em tudo o que descreveu:
+            O que você está construindo: um estrategista que integra contabilidade, dados e execução.
           </p>
 
-          <div class="profile">
-            <div class="item">
-              <div class="t">
-                <strong>O Profissional</strong>
-                <span class="tag">📚 Diploma + CRC + Holding</span>
-              </div>
-              <p>Contador com diploma e CRC em mãos, fundador de sua própria Holding.</p>
-            </div>
+          <div class="block" style="margin-bottom:12px;">
+            <h3>O Profissional</h3>
+            <p>Contador com diploma e CRC em mãos, fundador de sua própria Holding.</p>
+          </div>
 
-            <div class="item">
-              <div class="t">
-                <strong>O Trader</strong>
-                <span class="tag">🤖 Automação + Dados</span>
-              </div>
-              <p>
-                Um operador que evoluiu do manual para a automação, utilizando o "supra sumo" da Análise de Dados
-                para validar suas operações.
-              </p>
-            </div>
+          <div class="block" style="margin-bottom:12px;">
+            <h3>O Trader</h3>
+            <p>Operador que evoluiu do manual para a automação, validando operações com Análise de Dados.</p>
+          </div>
 
-            <div class="item">
-              <div class="t">
-                <strong>O Intelectual</strong>
-                <span class="tag">🗣️ ES + PT + EN</span>
-              </div>
-              <p>
-                Poliglota em construção, com Espanhol super fluente, iniciando os estudos de Inglês e com uma gramática
-                de Português impecável.
-              </p>
-            </div>
+          <div class="block" style="margin-bottom:12px;">
+            <h3>O Intelectual</h3>
+            <p>Poliglota em construção: Espanhol super fluente, Inglês em evolução, Português impecável.</p>
+          </div>
 
-            <div class="item">
-              <div class="t">
-                <strong>O Estrategista</strong>
-                <span class="tag">♟️ 1800 Lichess</span>
-              </div>
-              <p>
-                Um enxadrista sólido, mantendo um rating de 1800 no Lichess, aplicando a paciência do tabuleiro nos negócios.
-              </p>
-            </div>
-
-            <div class="item">
-              <div class="t">
-                <strong>A Personalidade</strong>
-                <span class="tag">🧠 Calma + Escuta</span>
-              </div>
-              <p>
-                Um homem educado, calmo e que sabe ouvir, com domínio geográfico e confiança de quem dirige com perícia
-                sem depender de GPS.
-              </p>
-            </div>
+          <div class="block">
+            <h3>O Estrategista</h3>
+            <p>Xadrez sólido (1800 no Lichess) aplicado à paciência, planejamento e tomada de decisão.</p>
           </div>
         </div>
       </section>
@@ -362,7 +319,7 @@
       <!-- Coluna 2: Metas -->
       <aside class="card" id="metas">
         <div class="hd">
-          <h2>Todas as suas metas</h2>
+          <h2>Metas</h2>
           <span class="badge">Checklist completo</span>
         </div>
         <div class="bd">
@@ -484,7 +441,7 @@
                 <strong>Liberdade Geográfica Real (mundo)</strong>
                 <span class="tag">🌍 Capitais</span>
               </div>
-              <p>Levar o “dirigir sem GPS” para o mundo: confiança para se locomover em grandes capitais globais com a mesma naturalidade que em Porto Alegre.</p>
+              <p>Levar o “dirigir sem GPS” para o mundo: confiança para se locomover em grandes capitais globais com a mesma naturalidade que faz em Porto Alegre.</p>
             </li>
 
             <li class="goal">
@@ -509,7 +466,7 @@
 
     <section class="card" style="margin-top:18px;" id="proximo-passo">
       <div class="hd">
-        <h2>Próximo passo ideal</h2>
+        <h2>Próximo passo</h2>
         <span class="badge">Decisão</span>
       </div>
       <div class="bd">
@@ -524,7 +481,7 @@
     </section>
 
     <footer>
-      ✦ Vagner Gestor — Identidade e Metas ✦
+      ✦ Estrategista | Gestor | Trader ✦
     </footer>
   </div>
 </body>
