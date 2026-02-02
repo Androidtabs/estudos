@@ -6,15 +6,20 @@
   <title>Estrategista | Gestor | Trader</title>
   <style>
     :root{
-      --bg1:#0b1020;
-      --bg2:#0f1b3a;
-      --card: rgba(255,255,255,.08);
-      --card2: rgba(255,255,255,.06);
+      --bg0:#050710;
+      --bg1:#070b1a;
+      --bg2:#07132a;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
       --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
+      --muted: rgba(255,255,255,.68);
       --line: rgba(255,255,255,.14);
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
-      --radius: 20px;
+      --glow: rgba(120,210,255,.25);
+      --glow2: rgba(170,130,255,.22);
+      --accent: rgba(120,210,255,.95);
+      --accent2: rgba(170,130,255,.95);
+      --shadow: 0 22px 80px rgba(0,0,0,.55);
+      --radius: 22px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
@@ -26,48 +31,96 @@
       font-family: var(--sans);
       color: var(--text);
       background:
-        radial-gradient(1200px 900px at 15% 10%, rgba(120,210,255,.22), transparent 55%),
-        radial-gradient(900px 700px at 85% 20%, rgba(170,130,255,.18), transparent 60%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
+        radial-gradient(1200px 900px at 15% 10%, var(--glow), transparent 55%),
+        radial-gradient(900px 700px at 85% 20%, var(--glow2), transparent 60%),
+        radial-gradient(800px 650px at 60% 90%, rgba(80,255,210,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 35%, var(--bg2));
       overflow-x:hidden;
     }
 
+    /* subtle grid + scanline */
+    .bg-grid{
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      opacity: .45;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px) 0 0 / 34px 34px,
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 34px 34px;
+      mask-image: radial-gradient(closest-side at 50% 20%, rgba(0,0,0,.95), transparent 70%);
+    }
+    .scan{
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      opacity: .10;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.08) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+      mix-blend-mode: overlay;
+    }
+
     .wrap{
-      max-width: 1100px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 36px 18px 56px;
+      padding: 38px 18px 64px;
     }
 
     header{
-      display:flex;
-      flex-direction:column;
-      gap: 14px;
-      padding: 22px 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--card), var(--card2));
-      box-shadow: var(--shadow);
       position: relative;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      box-shadow: var(--shadow);
       overflow:hidden;
     }
     header::before{
       content:"";
       position:absolute;
-      inset:-120px;
+      inset:-2px;
       background:
-        radial-gradient(closest-side at 20% 30%, rgba(120,210,255,.22), transparent 55%),
-        radial-gradient(closest-side at 70% 40%, rgba(170,130,255,.18), transparent 60%);
-      filter: blur(2px);
+        radial-gradient(closest-side at 18% 35%, rgba(120,210,255,.22), transparent 55%),
+        radial-gradient(closest-side at 72% 30%, rgba(170,130,255,.18), transparent 60%),
+        radial-gradient(closest-side at 60% 85%, rgba(80,255,210,.10), transparent 55%);
+      filter: blur(10px);
+      opacity: .9;
       pointer-events:none;
     }
-    header > *{ position:relative; }
+    header::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,.06) 35%, transparent 70%);
+      transform: translateX(-40%);
+      animation: sheen 7.5s ease-in-out infinite;
+      opacity: .55;
+      pointer-events:none;
+    }
+    @keyframes sheen{
+      0%{ transform: translateX(-60%); }
+      50%{ transform: translateX(60%); }
+      100%{ transform: translateX(-60%); }
+    }
+
+    .head-inner{
+      position:relative;
+      padding: 22px 22px 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
 
     .kicker{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       align-items:center;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--muted);
     }
     .pill{
@@ -75,29 +128,39 @@
       align-items:center;
       gap:8px;
       padding: 8px 12px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.14);
       border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      backdrop-filter: blur(8px);
+      background: rgba(0,0,0,.18);
+      backdrop-filter: blur(10px);
     }
     .pill b{
       font-family: var(--mono);
-      font-weight: 600;
-      color: rgba(255,255,255,.88);
+      font-weight: 650;
+      color: rgba(255,255,255,.86);
+      letter-spacing:.02em;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 22px rgba(120,210,255,.65);
+    }
+    .dot2{
+      background: var(--accent2);
+      box-shadow: 0 0 22px rgba(170,130,255,.55);
     }
 
     h1{
-      margin: 4px 0 0;
-      font-size: clamp(26px, 4vw, 42px);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
+      margin: 2px 0 0;
+      font-size: clamp(28px, 4.6vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
     .subtitle{
       margin: 0;
-      color: var(--muted);
+      color: rgba(255,255,255,.74);
       font-size: 16px;
-      line-height: 1.65;
-      max-width: 84ch;
+      line-height: 1.7;
+      max-width: 92ch;
     }
 
     nav{
@@ -109,38 +172,96 @@
     nav a{
       text-decoration:none;
       color: rgba(255,255,255,.86);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.18);
       padding: 10px 12px;
-      border-radius: 12px;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      border-radius: 14px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
     nav a:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.26);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    }
+
+    .stats{
+      margin-top: 2px;
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    @media (max-width: 860px){
+      .stats{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .stat{
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.16);
+      border-radius: 16px;
+      padding: 12px 12px;
+      position:relative;
+      overflow:hidden;
+    }
+    .stat::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background: radial-gradient(closest-side at 25% 30%, rgba(120,210,255,.12), transparent 60%);
+      filter: blur(4px);
+      opacity: .9;
+      pointer-events:none;
+    }
+    .stat > *{ position:relative; }
+    .stat .k{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.64);
+    }
+    .stat .v{
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing:.02em;
+      color: rgba(255,255,255,.90);
     }
 
     main{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 18px;
-      margin-top: 18px;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 16px;
+      margin-top: 16px;
     }
     @media (max-width: 920px){
       main{ grid-template-columns: 1fr; }
     }
 
     .card{
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.14);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--card), var(--card2));
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
       box-shadow: var(--shadow);
       overflow:hidden;
+      position:relative;
     }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(closest-side at 20% 25%, rgba(120,210,255,.10), transparent 60%),
+        radial-gradient(closest-side at 80% 30%, rgba(170,130,255,.08), transparent 65%);
+      filter: blur(10px);
+      opacity: .9;
+      pointer-events:none;
+    }
+    .card > *{ position:relative; }
+
     .card .hd{
       padding: 18px 18px 12px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(255,255,255,.12);
       display:flex;
       align-items:flex-start;
       justify-content:space-between;
@@ -157,8 +278,8 @@
       gap:8px;
       padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
       color: rgba(255,255,255,.86);
       font-size: 13px;
       white-space:nowrap;
@@ -169,16 +290,34 @@
 
     .lead{
       margin: 0 0 12px;
-      color: rgba(255,255,255,.90);
+      color: rgba(255,255,255,.88);
       line-height: 1.7;
     }
 
     .block{
       border: 1px solid rgba(255,255,255,.10);
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 14px 14px;
-      background: rgba(0,0,0,.12);
+      background: rgba(0,0,0,.16);
+      position:relative;
+      overflow:hidden;
     }
+    .block::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.05), transparent);
+      transform: translateX(-45%);
+      animation: sweep 8.5s ease-in-out infinite;
+      opacity:.55;
+      pointer-events:none;
+    }
+    @keyframes sweep{
+      0%{ transform: translateX(-60%); }
+      50%{ transform: translateX(60%); }
+      100%{ transform: translateX(-60%); }
+    }
+    .block > *{ position:relative; }
     .block h3{
       margin: 0 0 8px;
       font-size: 15px;
@@ -186,7 +325,7 @@
     }
     .block p{
       margin: 0;
-      color: var(--muted);
+      color: rgba(255,255,255,.70);
       line-height: 1.65;
       font-size: 14px;
     }
@@ -200,10 +339,21 @@
     }
     .goal{
       border: 1px solid rgba(255,255,255,.10);
-      border-radius: 16px;
-      background: rgba(0,0,0,.12);
+      border-radius: 18px;
+      background: rgba(0,0,0,.16);
       padding: 14px 14px;
+      position:relative;
+      overflow:hidden;
     }
+    .goal::before{
+      content:"";
+      position:absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      opacity: .95;
+    }
+    .goal > *{ position:relative; }
     .goal .row{
       display:flex;
       align-items:flex-start;
@@ -227,71 +377,80 @@
     }
     .goal p{
       margin: 10px 0 0;
-      color: var(--muted);
+      color: rgba(255,255,255,.70);
       line-height: 1.65;
       font-size: 14px;
     }
 
-    .cta{
-      border: 1px solid rgba(255,255,255,.14);
-      background: linear-gradient(180deg, rgba(120,210,255,.14), rgba(170,130,255,.10));
-      border-radius: 18px;
-      padding: 16px 16px;
-    }
-    .cta h3{
-      margin: 0 0 8px;
-      font-size: 16px;
-      letter-spacing:-0.01em;
-    }
-    .cta p{
-      margin: 0;
-      color: rgba(255,255,255,.84);
-      line-height: 1.65;
-    }
-
     footer{
       margin-top: 18px;
-      color: rgba(255,255,255,.60);
-      font-size: 13px;
+      color: rgba(255,255,255,.58);
+      font-size: 12.5px;
       text-align:center;
+      font-family: var(--mono);
+      letter-spacing: .06em;
+      text-transform: uppercase;
     }
   </style>
 </head>
 
 <body>
+  <div class="bg-grid"></div>
+  <div class="scan"></div>
+
   <div class="wrap">
     <header>
-      <div class="kicker">
-        <span class="pill">🧭 <b>Estrategista de Patrimônio</b></span>
-        <span class="pill">📊 Contabilidade + Trading Quantitativo</span>
-        <span class="pill">♟️ 1800 Lichess</span>
-        <span class="pill">🗺️ Direção sem GPS</span>
+      <div class="head-inner">
+        <div class="kicker">
+          <span class="pill"><span class="dot"></span> <b>SISTEMA</b> · Estrategista de Patrimônio</span>
+          <span class="pill"><span class="dot dot2"></span> <b>STACK</b> · Contabilidade + Dados + Trading Quant</span>
+          <span class="pill">♟️ 1800 Lichess</span>
+          <span class="pill">🗺️ Direção sem GPS</span>
+        </div>
+
+        <h1>Estrategista | Gestor | Trader</h1>
+        <p class="subtitle">
+          Perfil &amp; Postura: Um homem educado, calmo e que sabe ouvir realmente as pessoas.
+          Possui domínio geográfico total, dirigindo com perícia e confiança sem depender de GPS.
+          No xadrez, um estrategista sólido mantendo 1800 no Lichess.
+        </p>
+
+        <nav>
+          <a href="#objetivos">🎯 Objetivos</a>
+          <a href="#metas">✅ Metas</a>
+        </nav>
+
+        <div class="stats" aria-label="Indicadores">
+          <div class="stat">
+            <div class="k">FOCO</div>
+            <div class="v">DADOS · EXECUÇÃO</div>
+          </div>
+          <div class="stat">
+            <div class="k">MOTOR</div>
+            <div class="v">AUTOMAÇÃO</div>
+          </div>
+          <div class="stat">
+            <div class="k">ALAVANCA</div>
+            <div class="v">CONTABILIDADE</div>
+          </div>
+          <div class="stat">
+            <div class="k">MENTALIDADE</div>
+            <div class="v">DISCIPLINA</div>
+          </div>
+        </div>
       </div>
-
-      <h1>Estrategista | Gestor | Trader</h1>
-      <p class="subtitle">
-        Perfil &amp; Postura: Um homem educado, calmo e que sabe ouvir realmente as pessoas.
-        Possui domínio geográfico total, dirigindo com perícia e confiança sem depender de GPS.
-        No xadrez, um estrategista sólido mantendo 1800 no Lichess.
-      </p>
-
-      <nav>
-        <a href="#objetivos">🎯 Objetivos</a>
-        <a href="#metas">✅ Metas (tudo o que você listou)</a>
-        <a href="#proximo-passo">➡️ Próximo passo</a>
-      </nav>
     </header>
 
     <main>
-      <!-- Coluna 1: Objetivos (substitui "O Perfil do Vagner 2.0") -->
+      <!-- Objetivos -->
       <section class="card" id="objetivos">
         <div class="hd">
           <h2>Objetivos</h2>
-          <span class="badge">Base do projeto</span>
+          <span class="badge">Arquitetura do perfil</span>
         </div>
         <div class="bd">
           <p class="lead">
-            O que você está construindo: um estrategista que integra contabilidade, dados e execução.
+            Você está construindo um estrategista que integra contabilidade, automação e validação por dados.
           </p>
 
           <div class="block" style="margin-bottom:12px;">
@@ -316,11 +475,11 @@
         </div>
       </section>
 
-      <!-- Coluna 2: Metas -->
+      <!-- Metas -->
       <aside class="card" id="metas">
         <div class="hd">
           <h2>Metas</h2>
-          <span class="badge">Checklist completo</span>
+          <span class="badge">Dataset pessoal</span>
         </div>
         <div class="bd">
           <ol class="list">
@@ -464,24 +623,8 @@
       </aside>
     </main>
 
-    <section class="card" style="margin-top:18px;" id="proximo-passo">
-      <div class="hd">
-        <h2>Próximo passo</h2>
-        <span class="badge">Decisão</span>
-      </div>
-      <div class="bd">
-        <div class="cta">
-          <h3>Escolha o foco (agora)</h3>
-          <p>
-            Quer que eu ajude a desenhar o primeiro rascunho da estrutura da sua Holding
-            ou prefere focar no cronograma de automação do trading?
-          </p>
-        </div>
-      </div>
-    </section>
-
     <footer>
-      ✦ Estrategista | Gestor | Trader ✦
+      ESTRATEGISTA · GESTOR · TRADER
     </footer>
   </div>
 </body>
